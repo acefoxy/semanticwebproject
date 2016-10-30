@@ -1,0 +1,878 @@
+@prefix art: <http://www.example.org/art/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbp:	<http://dbpedia.org/property/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp-prop: <http://dbpedia.org/property/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://www.example.org/art> a owl:Ontology .
+
+art:isArtist a owl:ObjectProperty .
+art:Made a owl:ObjectProperty .
+dbp:artist a owl:ObjectProperty .
+dbo:movement a owl:ObjectProperty .
+dbo:abstracta a owl:ObjectProperty .
+dbo:abstractp a owl:ObjectProperty .
+dbo:artist a owl:ObjectProperty .
+dbp:museum a owl:ObjectProperty .
+dc:creator a owl:ObjectProperty .
+foaf:depiction a owl:ObjectProperty .
+
+art:Art a owl:Class .
+art:Jacob_van_Ruisdael a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid1 .
+_:genid1 a owl:Restriction ;
+owl:onProperty dbp:artist ;
+owl:hasValue dbr:Jacob_van_Ruisdael .
+
+art:Johannes_Vermeer a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid2 .
+_:genid2 a owl:Restriction ;
+owl:onProperty dbp:artist ;
+owl:hasValue dbr:Johannes_Vermeer .
+
+art:Rembrandt a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid3 .
+_:genid3 a owl:Restriction ;
+owl:onProperty dbp:artist ;
+owl:hasValue dbr:Rembrandt .
+
+art:Jan_Steen a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid4 .
+_:genid4 a owl:Restriction ;
+owl:onProperty dbp:artist ;
+owl:hasValue dbr:Jan_Steen .
+
+art:Jacob_van_Ruisdael a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid31 .
+_:genid31 a owl:Restriction ;
+owl:onProperty dbo:artist ;
+owl:hasValue dbr:Jacob_van_Ruisdael .
+
+art:Johannes_Vermeer a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid32 .
+_:genid32 a owl:Restriction ;
+owl:onProperty dbo:artist ;
+owl:hasValue dbr:Johannes_Vermeer .
+
+art:Rembrandt a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid33 .
+_:genid33 a owl:Restriction ;
+owl:onProperty dbo:artist ;
+owl:hasValue dbr:Rembrandt .
+
+art:Jan_Steen a owl:Class ;
+rdfs:subClassOf art:Art ;
+owl:equivalentClass _:genid34 .
+_:genid34 a owl:Restriction ;
+owl:onProperty dbo:artist ;
+owl:hasValue dbr:Jan_Steen .
+
+art:Artist a owl:Class .
+
+art:Location a owl:Class .
+art:Movement a owl:Class .
+art:Abstract_art a owl:Class ;
+rdfs:subClassOf art:Art .
+art:Creation_Date a owl:Class ;
+rdfs:subClassOf art:Art .
+art:Picture a owl:Class ;
+rdfs:subClassOf art:Art .
+art:Abstract_Artist a owl:Class ;
+rdfs:subClassOf art:Artist .
+art:Birthplace a owl:Class ;
+rdfs:subClassOf art:Artist .
+art:Museum a owl:Class;
+rdfs:subClassOf art:Location .
+art:Dutch_Golden_Age a owl:Class ;
+rdfs:subClassOf art:Movement ;
+owl:equivalentClass _:genid5 .
+_:genid5 a owl:Restriction ;
+owl:onProperty dbo:movement ;
+owl:hasValue dbr:Dutch_Golden_Age .
+
+art:Baroque a owl:Class ;
+rdfs:subClassOf art:Movement ;
+owl:equivalentClass _:genid6 .
+_:genid6 a owl:Restriction ;
+owl:onProperty dbo:movement ;
+owl:hasValue dbr:Baroque .
+art:Mannerism a owl:Class ;
+rdfs:subClassOf art:Movement ;
+owl:equivalentClass _:genid7 .
+_:genid7 a owl:Restriction ;
+owl:onProperty dbo:movement ;
+owl:hasValue dbr:Mannerism .
+
+
+dbr:View_of_Haarlem_with_Bleaching_Fields	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:Windmill_at_Wijk_bij_Duurstede	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:A_Wooded_Marsh	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:The_Feast_of_Saint_Nicholas	dbp:artist	dbr:Jan_Steen .
+dbr:The_Jewish_Cemetery	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:A_Landscape_with_a_Ruined_Castle_and_a_Church	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:The_Ray_of_Light	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:A_Waterfall_in_a_Rocky_Landscape	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:Two_Watermills_and_an_Open_Sluice_near_Singraven	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:The_Dancing_Couple	dbp:artist	dbr:Jan_Steen .
+dbr:A_Mayor_of_Delft_and_his_Daughter	dbp:artist	dbr:Jan_Steen .
+dbr:Landscape_with_Waterfall	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:Mountain_Landscape_with_a_Watermill	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:Rough_Sea_at_a_Jetty	dbp:artist	dbr:Jacob_van_Ruisdael .
+<http://dbpedia.org/resource/The_Watermill_(Ruisdael)>	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:View_of_Bentheim_Castle	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:View_of_Egmond_aan_Zee	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:View_on_the_Amstel_from_Amsteldijk	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:Waterfall_in_a_Mountainous_Landscape_with_a_Ruined_Castle	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:Winter_Landscape_near_Haarlem	dbp:artist	dbr:Jacob_van_Ruisdael .
+dbr:A_Girl_Asleep	dbp:museum	dbr:Metropolitan_Museum_of_Art .
+
+dbr:A_Girl_Asleep	dbp:museum	dbr:Metropolitan_Museum_of_Art .
+
+dbr:A_Girl_Asleep	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"A Girl Asleep, also known as A Woman Asleep, A Woman Asleep at Table, and A Maid Asleep, is a painting by the Dutch master Johannes Vermeer, 1657. It is housed at the Metropolitan Museum of Art in New York City and may not be lent elsewhere under the terms of the donor's bequest."@en .
+dbr:Portrait_of_a_Man_with_Arms_Akimbo	dbp:museum	dbr:Agnes_Etherington_Art_Centre ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Portrait of a man with arms akimbo, formerly known as Portrait of a Foreign Admiral or Portrait of a Dutch Admiral, is an oil painting portrait by Rembrandt signed and dated 1658. It is now in the collection of the Agnes Etherington Art Centre at Queen's University, and measures 107.4 cm by 87.0 cm.The painting was rediscovered in December 2009 after being off public display for around forty years. It was purchased by Steve Wynn at Christie's in December 2009 for \u00A320 million, the highest price ever paid for a painting by Rembrandt. In 2011 it was purchased by Isabel and Alfred Bader. They offered it for sale at the 2011 TEFAF art show in Maastricht for 47 million Euros. The Baders donated the painting to the Agnes Etherington Art Centre in December 2015."@en .
+dbr:Girl_with_a_Red_Hat	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Girl with a Red Hat is a rather small painting, signed by the Dutch painter Johannes Vermeer. It is seen as one of a number of Vermeer's tronies \u2013 depictions of models fancifully dressed that were not (as far as is known) intended to be portraits of specific, identifiable subjects. Other believe it is a portrait. Whether Vermeer chose family members as models or found them elsewhere in Delft is irrelevant to the appreciation of his paintings. Its attribution to Vermeer \u2013 as it is on a (recycled) wood panel and not on canvas \u2013 has been a matter of controversy with scholars on both sides of the argument."@en .
+dbr:View_of_Haarlem_with_Bleaching_Fields	dbp:museum	dbr:Kunsthaus_Zürich ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"View of Haarlem with Bleaching Fields (c. 1670\u20131675) is an oil on canvas painting by the Dutch painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Kunsthaus Z\u00FCrich.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"92. The Haarlem Bleaching-Grounds. In the left foreground is a marshy pool surrounded with trees. A road leads from it up a hill towards the right background. In the middle distance is part of the bleaching-grounds ; large pieces of linen are spread out near cottages, and many persons are at work. In the distance is the town of Haarlem, dominated by the church of St. Bavo. The sky is filled with great masses of cloud which overshadow almost the whole landscape ; stray sunbeams illumine part of the town and the bleaching-grounds. Signed in full in the left-hand bottom corner ; canvas, 25 1/2 inches by 22 inches. Exhibited at Diisseldorf, 1886, No. 288. Sale. Count Sierstorpff, Berlin, April 19, 1887, No. 67."@en .
+dbr:Girl_Interrupted_at_her_Music	dbp:museum	dbr:Frick_Collection ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Girl Interrupted at her Music is a painting by the Dutch artist Johannes Vermeer. It was painted in the baroque style, probably between the years 1658 and 1659, using oil on canvas. In this painting, Vermeer depicts a young woman at her music with an older gentleman. This painting shows the typical courtship during the 17th century in Europe. It also focuses on the importance of music when it comes to love. The room that they are shown in is one of higher class, most likely belonging to a person of haute bourgeoisie. The painting is very reminiscent of Vermeer\u2019s other works."@en .
+dbr:A_Polish_Nobleman	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"A Polish Nobleman is a 1637 painting by Rembrandt depicting a man in a costume of either Polish szlachta or Eastern-European boyar nobility. The identity of the subject of the painting is unclear, and has given rise to several different interpretations; though most often presumed to be one Robert Fitz the 1st. The painting has changed owners several times, and its past owners have included Catherine II the Great and Andrew Mellon. It is currently located at the National Gallery of Art in Washington, D.C."@en .
+<http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Altman)>	dbp:museum	dbr:Metropolitan_Museum_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Self-Portrait is a 1660 oil on canvas painting of himself by the Dutch artist Rembrandt. Painted when the artist was fifty-four, it has been noted as a work in which may be seen \\\"the wrinkled brow and the worried expression the troubled condition of his mind\\\". Part of the Benjamin Altman Collection, it has been in the Metropolitan Museum of Art since 1913."@en .
+dbr:Lady_Standing_at_a_Virginal	dbp:museum	dbr:National_Gallery ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Lady Standing at a Virginal is a genre painting created by the Dutch artist Johannes Vermeer in about 1670\u20131672, now in the National Gallery, London."@en .
+dbr:Titus_as_a_Monk	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Titus as a Monk or Rembrandt's Son Titus in a Monk's Habit is a 1660 oil on canvas painting by the Dutch artist Rembrandt, showing his son Titus in the habit of a Franciscan monk. It is now in the collection of the Rijksmuseum in Amsterdam."@en .
+<http://dbpedia.org/resource/Self-portrait_(Frick,_Rembrandt)>	dbp:museum	dbr:Frick_Collection ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Self Portrait is a 1658 self portrait by Rembrandt, formerly owned by the Earl of Ilchester and now in the Frick Collection in New York."@en .
+dbr:Jan_Steen	dbo:movement	dbr:Dutch_Golden_Age_painting ;
+	dbo:abstracta	"Jan Havickszoon Steen (c. 1626 \u2013 buried 3 February 1679) was a Dutch genre painter of the 17th century (also known as the Dutch Golden Age). His works are known for their psychological insight, sense of humour and abundance of colour."@en .
+dbr:The_Storm_on_the_Sea_of_Galilee	dbp:museum	"Whereabouts unknown since the Isabella Stewart Gardner Museum theft in 1990"@en ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Storm on the Sea of Galilee is a painting from 1633 by the Dutch Golden Age painter Rembrandt van Rijn that was in the Isabella Stewart Gardner Museum of Boston, Massachusetts, United States, prior to being stolen in 1990. The painting depicts the miracle of Jesus calming the storm on the Sea of Galilee, as depicted in the fourth chapter of the Gospel of Mark in the New Testament of the Christian Bible.  It is Rembrandt's only seascape."@en .
+<http://dbpedia.org/resource/Susanna_and_the_Elders_(Rembrandt)>	dbp:museum	<http://dbpedia.org/resource/Gem\u00E4ldegalerie,_Berlin> ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Susanna and the Elders is a 1647 painting by Rembrandt, now in the Gemaldegalerie in Berlin. It is an oil on panel painting by the Dutch painter Rembrandt and represents the story of Susanna from the Bible. The scene shows the moment when Susanna is surprised at the moment she enters her bath. This painting was documented by Hofstede de Groot in 1915, who wrote; \\\"55. SUSANNA AT THE BATH. Sm. 41.; Bode 255 ; Dut. 36; Wb. 21 ; B.-HdG. 322. Susanna, turning to the left, is about to descend the stone steps from the right into the water. She is surprised by the two Elders. One of them tries with his left hand to tear away her bathing-towel, and makes a threatening gesture with his clenched right fist. The more aged of the two men, behind to the right, hobbles forward out of the shadow. Susanna, shivering, stands with one foot in the water ; with her right hand she presses the towel firmly against her body with a gesture of alarm, and holds her left arm before her bosom. She looks out of the picture with an expression of dread and entreaty. On the stone bench to the right lies her rich gown of brilliant red. To the left, beyond the basin, are the terraces, arcades, and towers of the royal palace of Babylon. On the bank is a peacock. A couple are walking amid the bushes. Small full-length figures. Signed on the right at foot on the edge of a step, \\\" Rembrandt f. 1647 \\\" ; oak panel, 30 inches by 36 inches. There are painted studies for the Susanna in the Louvre (58) and in the collection of Leon Bonnat, Paris (60) ; for the elder in front in the Bischoffsheim collection, Paris (59), and in the Von Nemes collection, Budapest (56). A finished drawing is in the Landesgalerie, Budapest, reproduced in Handzeichnungen der Albertlna, 286. A study in red chalk is in the Berlin Print-room, reproduced by Lippmann and Hofstede de Groot, 20. A chalk study for the Susanna is also in the Berlin Print-room, reproduced by Lippmann, 197. Several pen-and-ink studies for the elder in front were in the collection of J. P. Heseltine (HdG. 986 and 1021). Engraved in mezzotint by R. Earlom, 1769. Mentioned by Bode, pp. 485, 591 ; by Dutuit, p. 25 ; by Michel, pp. 323, 551 [247, 249-50, 436]. For the relation of this and other pictures of \\\"Susanna\\\" by Rembrandt to a picture by Lastman, see Valentiner in the Zeitschrift f\u00FCr bildende Kunst, November 1907, and Kurt Freise, P. Lastman, pp. 249, etc. Exhibited at the Royal Academy Winter Exhibition, London, 1883, No. 236. Possibly in the collection of Adriaen Banck, Amsterdam, who in 1647 bought a \\\" Susanna \\\" from Rembrandt for 500 florins and sold it to Adriaen Maen of Schiedam in 1660 for 560 florins. See Hofstede de Groot, Urkunden \u00FCber Rembrandt, Nos. 207, 732. Sales. Baron Schonborn, Amsterdam, April 16, 1738 (Hoct, i. 511), No. 66 but No. 65 of the original catalogue (700 florins). J. A. J. Aved, Paris, November 24, 1766 (2760 francs). In the collection of Edmund Burke, London, 1769. Sale. Sir Joshua Reynolds, London, March 11, 1795 (\u00A3156, according to Sm.). In the collection of Sir E. Lechmere, Bart., The Rhydd, till 1883. In the possession of the Paris dealer C. Sedelmeyer, \\\" Catalogue of 300 Paintings,\\\" No. 135 ; sold in 1883 to Berlin. In the Kaiser Friedrich Museum, Berlin, 1911 catalogue, No. 828E.\\\".Other \\\"Susanna\\\" paintings by Rembrandt or his school are:"@en .
+dbr:Lady_Writing_a_Letter_with_her_Maid	dbp:museum	dbr:National_Gallery_of_Ireland ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Lady Writing a Letter with her Maid is a painting by the Dutch artist Johannes Vermeer, completed between 1670\u20131671 and held in the National Gallery of Ireland. The work shows a middle-class woman attended by a maid who is presumably acting as messenger and go-between for the lady and her lover. The work is seen as a bridge between the quiet restraint and self-containment of Vermeer's work of the 1660s and his relatively cooler work of the 1670s. It may have been partly inspired by Ter Borch's painting Woman Sealing a Letter. The painting's canvas was almost certainly cut from the same bolt used for Woman with a Lute.Lady Writing a Letter with her Maid is the first of the artist's experiments with centrifugal composition; where the focus is not only from the center of the canvas. In addition, it is his third work in which the drama and dynamic is not centered on a single figure. The maid is shown standing in the mid-ground, behind her lady, with her hands crossed and waiting for the letter to be completed. The positions of their bodies indicates that the two women are disconnected. The folded arms of the maid seem outwardly as an attempt to display a sense of self-containment, however she is detached from her lady both emotionally and psychologically. The maid's gaze towards the half-visible window indicates an inner restlessness and boredom, as she waits impatiently for the messenger to carry her lady's letter away. Some art historians dispute the absoluteness of this view; according to Pascal Bonafoux, while complicity is not \\\"indicated by a look or a smile\\\" from either woman, the mere fact of her presence during such an intimate act as the composition of a love letter indicates at least a degree of intimacy between the two.The painting visits many of Vermeer's usual painterly motifs; in particular his obsession with the inside/outside axis of interior spaces, and through his description of the tiled floor as well as the verticals of the dresses, window frame and back wall painting, his interest in geometry and abstract form. Vermeer had experimented with this painterly device earlier in his career, notably in his View of Delft, The Lacemaker and The Art of Painting.Lady Writing was stolen on 27 April 1974, along with a Goya, two Gainsboroughs and three Rubens from the Russborough House home of Sir Alfred Beit by armed members of the IRA. Led by the British heiress Dr. Rose Dugdale, the thieves used screwdrivers to cut the paintings from their frames. However, the Vermeer and other works were recovered eight days later at a cottage in County Cork. The work was again taken in 1986 by a gang led by the Dublin gangster Martin Cahill. Along with a number of other art-works, Cahill held the painting for a ransom of \u00A320 million. However, the money was not paid, and Cahill lacked contacts or knowledge to otherwise pass it on to international art thieves. According to an Radio Telef\u00EDs \u00C9ireann report, Cahill's taste in art extended only to \\\"cheery scenes like the cheap print in his living room of swans on a river, but he believed the stolen masterpieces would bring him a fortune.\\\" The painting was eventually recovered during an August 1993 exchange at Antwerp airport which turned out to be a sting operation organised by the Irish police. It had already been donated in absentia to the National Gallery in Dublin."@en .
+<http://dbpedia.org/resource/Flora_(Rembrandt,_Hermitage)>	dbp:museum	dbr:Hermitage_Museum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Flora or Saskia as Flora is a 1634 painting by Rembrandt, showing his wife Saskia van Uylenburgh as the goddess Flora. It is now in the Hermitage Museum in St Petersburg.This painting was documented by Hofstede de Groot in 1915, who wrote; \\\"206. FLORA. Bode 336 ; Dut. 267 ; Wb. 412 ; B.-HdG. 189. She stands, in profile to the left. She turns her face, which has Saskia's features, with a slight inclination towards the spectator. In her right hand she holds a staff entwined with flowers diagonally before her ; she lifts up her long mantle in front with her left hand. Her hair, adorned with a large garland of flowers, falls in long curls down her back. In her ear is a pearl. She wears a dress of gay pattern with loose sleeves, a scarf crossed on her bosom, and a light blue mantle falling from her shoulders. The light, which is evenly distributed, falls from the left. Thick bushes form a dark background. Life size, three-quarter length. Wrongly called until now \\\"The Jewish Bride.\\\" Signed on the left below the right hand, \\\"Rembrandt f. 1634\\\"; canvas, 50 inches by 40 inches. Etched by N. Mossoloff in Les Rembrandts de l'Ermitage ; and in the Zeitschrift f\u00FCr bildende Kunst, viii. Mentioned by Vosmaer, pp. 504, etc. ; by Bode, pp. 424, 60 1 ; by Dutuit, p. 37 ; by Michel, pp. 175, 567 [134, 441]. Sale. Herman Aarentz, Amsterdam, April II, 1770 (2600 florins, bought in) ; according to Van Eynden and Van der Willigen, iii. 384. Acquired by Catherine II., Empress of Russia, for the Hermitage. In the Hermitage Palace, Petrograd, 1901 catalogue, No. 812.\\\""@en .
+dbr:The_Polish_Rider	dbp:museum	dbr:Frick_Collection ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Polish Rider  is a seventeenth-century painting, usually dated to the 1650s, of a young man traveling on horseback through a murky landscape, now in The Frick Collection in New York. When the painting was sold by Zdzis\u0142aw Tarnowski to Henry Frick in 1910, there was consensus that the work was by the Dutch painter Rembrandt. This attribution has since been contested, though this remains a minority view. There has also been debate over whether the painting was intended as a portrait of a particular person, living or historical, and if so of whom, or if not, what it was intended to represent.  The quality of the painting is generally admitted as is its slight air of mystery,  though parts of the background are very sketchily painted or unfinished."@en .
+dbr:Woman_in_Blue_Reading_a_Letter	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Woman Reading a Letter (Dutch: Brieflezende vrouw) is a painting by the Dutch painter Johannes Vermeer. Part of the collection of the Rijksmuseum Amsterdam since 1885, it was the first Vermeer acquired by the museum."@en .
+dbr:Windmill_at_Wijk_bij_Duurstede	dbp:museum	"Amsterdam Museum on loan to the Rijksmuseum"@en ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"The Windmill of Wijk bij Duurstede (c. 1670) is an oil on canvas painting by the Dutch painter Jacob van Ruisdael. It is an example of Dutch Golden Age painting and is now in the collection of the Amsterdam Museum, on loan to the Rijksmuseum.The painting shows Wijk bij Duurstede, a riverside town about 20 kilometers from Utrecht, with a dominating cylindrical windmill, harmonised by the lines of river bank and sails, and the contrasts between light and shadow working together with the intensified concentration of mass and space.  The attention to detail is remarkable. Art historian Seymour Slive reports that both from an aeronautical engineering and a hydrological viewpoint the finest levels of details are correct, in the windmill's sails and the river's waves respectively.It is not known for certain when Ruisdael painted the Windmill. The painting is not dated, as very few of his works are after 1653. Dating subsequent work has therefore been largely detective work and speculation. It is assumed that it was painted in 1670.Unlike many other Ruisdaels the Windmill seems to have remained in Dutch hands. It was acquired by Adriaan van der Hoop (1778-1854) of Amsterdam at an unknown date, and bequeathed by him to the city of Amsterdam in 1854. Since 30 June 1885 it has been lent to the Rijksmuseum in Amsterdam, by the city of Amsterdam. Its enduring popularity is evidenced by card sales in the Rijksmuseum, with the Windmill ranking third after Rembrandt's Night Watch and Vermeer's View of Delft.Ruisdael's windmill no longer stands, although its foundations can still be seen. Another windmill located a few hundred meters further is often confused with Ruisdael's. This confusion was created when Hofstede de Groot in 1911 wrote about the painting:\\\"The Rhine flows from the left distance, filling almost the whole foreground except for a strip of the right-hand bank which is seen in front. The bank is lined with piles; reeds grow on it in the centre foreground. In the right middle distance is the great stone mill, with its sails at the back and inclined to the left. It rises far above the low trees around it and the episcopal palace beyond it to the left. To the right of the mill is a cottage ; farther to the right rises the church tower of the town. On a road along the bank to the right are three women. In the right foreground lie two millstones. On the river in the left distance are two sailing-boats. To the right of them, behind a bend in the stream, rise two masts. A fine cloudy sky. The mill still stands at this spot where the Rhine divides to form the Lek and the Kromme Rhyn (or \\\" Crooked \\\" Rhine). But it is not so high as it seems in the picture; and the lower part is now square and not round, and has a passage through it. Houses now stand where the low trees are seen round the mill. One of Ruisdael's finest pictures. [Compare 183 and 936.]Signed in full on the right at foot ; canvas, 33 inches by 40 inches. Engraved by L. C. van Kesteren, W. Steelink the elder, and J. H. Graadt van Roggen. Sale. ]. Noe, 1841. In the collection of A. van der Hoop, Amsterdam ; bequeathed to the town in 1854. In the Rijksmuseum, Amsterdam, Van der Hoop bequest, 1910 catalogue, No. 2074.\\\""@en .
+<http://dbpedia.org/resource/The_Kitchen_Maid_(Rembrandt)>	dbp:museum	dbr:Nationalmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Kitchen Maid (1651) is an oil on canvas painting by the Dutch painter Rembrandt.It is an example of Dutch Golden Age painting and is now in the collection of the Nationalmuseum.This painting was documented by Hofstede de Groot in 1915, who wrote; \\\"330. A YOUNG GIRL AT A WINDOW, IN FULL FACE. Sm. 506. ; Bode 365 ; Dut. 315 ; Wb. 440 ; B.-HdG. 397. She leans her right arm on the window-sill and rests her head on her left hand. She wears a dull red jacket. Her dark hair is combed back into a small golden-yellow cap. The loose chemisette is slightly open at the throat, showing a string of pearls and a little black ribbon hanging down on the bosom. Dark background ; the figure is lighted from above to the left. Half-length, life size. Formerly known as \\\" La Crasseuse.\\\" Signed in the centre at foot, \\\"Rembrandt f. 1651 \\\" ; canvas, 31 inches by 25 inches. Etched by L. Loewenstam. Mentioned by Bode, pp. 504, 606 ; by Dutuit, p. 40 ; by Michel, pp. 394, 568 [304-5,442]; by Roger de Piles, 1715 edition, p. 423 ; by Granberg, Inventaire G\u00E9nerale, iii. No. 297. In the collection of Roger de Piles, Paris. In the collection of Duvivier, Paris. In the collection of the Comte d'Hoym, Paris. In the collection of De Morville, Paris. Sales. Angran de Fonspertuis, Paris, March 4, 1748, No. 435 (2001 francs, with 203, \\\" Flora,\\\" Blondel de Gagny). Blondel de Gagny, Paris, December 10, 1776, No. 70 (6000 francs) ; it was then rounded at top and measured only 32 inches in height. Duc de Lavalliere, Paris, February 21, 1781 (5500 francs, with pendant, 467/7) ; see C. Blanc, ii. 43. In the collection of Gustavus III., King of Sweden. In the Stockholm National Museum, 1900 catalogue, No. 584.\\\"Other \\\"Kitchen Maid\\\" paintings by Rembrandt or his school are:"@en .
+dbr:Andromeda_Chained_to_the_Rocks	dbp:museum	dbr:Mauritshuis ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Andromeda Chained to the Rocks was painted by Rembrandt in approximately 1630, and is now in the Mauritshuis, in The Hague.Andromeda represents Rembrandt's first full length mythological female nude history painting and is taken from a story in Ovid's Metamorphoses. This story is about the daughter of an Ethiopian king who, as punishment for her mother's boasting, was chained to a rock to be sacrificed to a sea monster that was tormenting the Ethiopian people.Many artists such as Titian have depicted this story by showing Andromeda, her rescuer Perseus, and the sea monster all in the same composition. In this work, Rembrandt shies away from classical conventions by showing her not as a glamorous beauty but as a frightened naturalistic looking girl.  No other figure is included, but her alarmed look out of the picture space to the right creates narrative tension.  The painting is an example of Rembrandt's rejection of idealized beauty. Since he did not believe true beauty existed naturally, he painted women as he saw them; naturally imperfect and flawed.Rembrandt's subsequent nude mythological paintings from this period Diana Bathing and Dana\u00EB show his evolving portrayal of the nude."@en .
+<http://dbpedia.org/resource/The_Mill_(Rembrandt)>	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Mill is a painting by Dutch baroque artist Rembrandt Harmenszoon van Rijn. It is in the permanent collection of the National Gallery of Art in Washington DC. For a long time, the attribution to Rembrandt was regarded as doubtful; it has been restored in recent years, although it is not universally accepted. The painting was formerly in the Orleans Collection. It was once owned by Peter Arrell Brown Widener.This painting was documented by Hofstede de Groot in 1915, who wrote; \\\"952. LANDSCAPE WITH A WINDMILL [commonly called, The Mill]. Sm. 601 ; Bode 142 ; Dut. 4 52 ; Wb. 211 ; B.-HdG. 345. Beside a broad moat, high above the circular scarp of a ruined bastion, stands a windmill with some low cottages. The path from the mill leads, on the left, over a little bridge across a sluice, to a landing-post in the foreground. A woman with a child goes down to the water ; a man pushes a barrow upwards. In the centre foreground a woman at the water's edge is washing linen. A man behind watches her. From the right approaches a ferry-boat with the mast down, rowed by a man. To the right on the farther bank, amid dense groves of trees, are some cows, and beyond them a cottage. Evening light. The last rays of the sun illumine the right half of the sky and envelop the mill in their radiant glow. Painted about 1650. Canvas, 34 inches by 41 inches. A copy on panel, 34 1/2 inches by 39 1/2 inches was exhibited at the Grafton Gallery, London, 1911, No. 67 [by T. Humphry Ward]. Etched by Mathieu, Dequevauviller, Turner, P. J. Arendzen. Mentioned by Bode, pp. 493, 579 ; Dutuit, p. 46 ; Michel, pp. 367, 555 [282 -3, 433]; Waagen, iii. 157. Exhibited at the British Institution, London, 1815, No. 37, and 1864, No. 112; at the Royal Academy Winter Exhibition, London, 1878, No. 172 ; 1888, No. 74 ; and 1899, No. 40. Sale. Duc d'Orl\u00E9ans, 1798 (\u00A3525, W. Smith) ; see Buchanan, i. 196. In the collection of the Marquess of Lansdowne, Bowood, before 1836 (who is said by Sm. to have paid \u00A3840 for it) ; sold to P. A. B. Widener in 1911 (for \u00A3100,000). In the collection of P. A. B. Widener, Philadelphia.\\\""@en .
+dbr:Woman_with_a_Water_Jug	dbp:museum	dbr:Metropolitan_Museum_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Woman with a Water Jug, also known as Young Woman with a Water Pitcher, is a painting finished between 1660\u20131662 by the Dutch painter Johannes Vermeer in the Baroque style. It is oil on canvas, 45.7cm x 40.6 cm, and is on display at the Metropolitan Museum of Art, New York."@en .
+dbr:The_Music_Lesson	dbp:museum	<http://dbpedia.org/resource/St_James\u0027s_Palace> ,
+		dbr:Royal_Collection ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Music Lesson or Lady at the Virginals with a Gentleman by Johannes Vermeer, also known as Jan Vermeer, is a painting of young female pupil receiving the titular music lesson.  It has been estimated to have been painted between 1662 and 1665.  The medium of the work is oil on canvas.  It measures 74.6 cm by 64.1 cm."@en .
+<http://dbpedia.org/resource/The_Procuress_(Vermeer)>	dbp:museum	dbr:Gemäldegalerie_Alte_Meister ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Procuress is a 1656 oil-on-canvas painting by the 24-year-old Jan Vermeer. It can be seen in the Gem\u00E4ldegalerie Alte Meister in Dresden. It is his first genre painting and shows a scene of contemporary life, an image of mercenary love perhaps in a brothel. It differs from his earlier biblical and mythological scenes. It is one of only three paintings Vermeer signed and dated (the other two are The Astronomer and The Geographer).It seems Vermeer was influenced by earlier works on the same subject by Gerard ter Borch, and The Procuress (c. 1622) by Dirck van Baburen, which was owned by Vermeer's mother-in-law Maria Thins and hung in her home."@en .
+<http://dbpedia.org/resource/Bathsheba_at_Her_Bath_(Rembrandt)>	dbp:museum	dbr:Louvre ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Bathsheba at Her Bath (or Bathsheba with King David's Letter) is an oil painting by the Dutch artist Rembrandt (1606\u20131669) finished in 1654.A depiction that is both sensual and empathetic, it shows a moment from the Old Testament story in which King David sees Bathsheba bathing and, entranced, seduces and impregnates her. In order to marry Bathsheba and conceal his sin, David sends her husband into battle and orders his generals to abandon him, leaving him to certain death.While the scene of David spying on Bathsheba had been painted by earlier artists, Rembrandt's depiction differs in its tight pictorial focus and erotic vitality, achieved through broad, thick brushstrokes and vibrant coloration.The painting hangs in The Louvre; it is one of 583 works donated by Dr. Louis La Caze in 1869. For Kenneth Clark, the canvas is \\\"Rembrandt's greatest painting of the nude\\\". Its insight into Bathsheba's moral dilemma has been described as \\\"one of the great achievements of western painting.\\\""@en .
+dbr:The_Three_Crosses	dbp:museum	<http://dbpedia.org/resource/Museum_of_Fine_Arts,_Boston> ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Three Crosses is an etching and drypoint by the Dutch artist Rembrandt van Rijn, which depicts the crucifixion of Jesus Christ. It is considered 'one of the most dynamic prints ever made'.The main subject in the etching is Jesus Christ on the cross, flanked by the two thieves who were crucified with him. The etching depicts the Virgin Mary, mother of Jesus, weeping and supported by the Evangelist. Roman soldiers on horseback, along with grieving citizens, surround the crosses. A beam of light, representing God's light from heaven, pierces the darkened sky to envelope the crucified figure of Christ.The etching is noted for its especially intricate iconography, and may represent the exact moment of Christ's death. According to Paul Crenshaw of the Kemper Art Museum, Rembrandt was inspired by the text from Matthew 27:46-54 when Christ cried out, \u201CMy God, my God, why hast Thou forsaken Me?\u201D Rembrandt drew heavily on biblical sources in his work, as well as being influenced by other Baroque contemporaries. The etching is one of over 300 Bible-inspired works Rembrandt created.The Three Crosses does not allow for dramatic contrasts of light and shade, known as chiaroscuro. Rembrandt produced the work in four stages, increasing the effects of the light and shade contrasts at each stage. Etching and drypoint are labor-intensive processes and one of the early forms of printmaking. Rembrandt chose these media primarily because he often suffered financial hardship. He sold many of his etchings in order to be able to afford to print The Three Crosses. Rembrandt made around sixty impressions from the plate in its first three stages, the darkest shadows on the piece being done in dry point, and Christ and the lighter figures being etched. The nature of the media meant it was possible for Rembrandt to make continuous alterations (which he did over a ten year period), adding further etching and dry point, changing the composition of the picture and making the final image darker and more chaotic.In the last stage, the Virgin Mary becomes an almost disembodied head surrounded by darkness. The figures originally encircling her have been removed, as have been some of the soldiers on horseback. A man in a large hat (also on horseback) has been added and is believed to be a figure from Rembrandt\u2019s The Conspiracy of Claudius Civilis. The most dramatic alteration is to the \\\"heavenly light\\\" which has become considerably darkened, especially to the right of the picture. Rembrandt may have intended the contrast between the heavenly light and darkness surrounding it to distinguish the 'good' thief from the 'bad' thief.Each progressive change in the work increases the focal importance of the Christ figure. In its fourth and fifth state, Rembrandt inked the plates in a different number of ways and with different qualities of ink. One of the prints in the fourth stage is located at the Kemper Art Museum."@en .
+dbr:Girl_with_a_Flute	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Girl with a Flute is a small painting attributed to the Dutch Golden Age painter Johannes Vermeer, executed 1665\u20131670. The work is in possession of the National Gallery of Art in Washington, D.C., just as Woman Holding a Balance, A Lady Writing a Letter and Girl with a Red Hat (also attributed to Vermeer)."@en .
+dbr:A_Wooded_Marsh	dbp:museum	dbr:Hermitage_Museum ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"A Wooded Marsh (c. 1660s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Hermitage Museum.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"508. A POOL IN A WOOD. Sm. 306. A stagnant pool, overgrown with flowering water-lilies and other plants, extends from the centre of the distance to the foreground. On either side are beeches and oaks, reflected in the water. In the right foreground is a great withered oak ; in front of it lies a felled beech, with the left end in the water. On the left three ducks fly into the bushes at the approach of a man who is seen in the distance. A genuine and very fine picture, but almost all the green has faded from the foliage. Signed in full on the left at foot ; canvas, 29 inches by 39 1/2 inches. Acquired by the Empress Catherine II. of Russia. In the Hermitage Palace, St. Petersburg, 1901 catalogue, No. 1136 ; it was there in 1835 (Sm., who valued it at \u00A3450).\\\".This scene is very similar to other paintings Ruisdael made in this period and these often served as inspiration for later painters of landscape."@en .
+<http://dbpedia.org/resource/Belshazzar\u0027s_Feast_(Rembrandt)>	dbp:museum	dbr:National_Gallery ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Belshazzar's Feast is a painting by Rembrandt housed in the National Gallery, London. The painting is an attempt to establish Rembrandt as a painter of large, baroque history paintings."@en .
+<http://dbpedia.org/resource/The_Milkmaid_(Vermeer)>	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Milkmaid (Dutch: De Melkmeid or Het Melkmeisje), sometimes called The Kitchen Maid, is an oil-on-canvas painting of a \\\"milkmaid\\\", in fact a domestic kitchen maid, by the Dutch artist Johannes Vermeer. It is now in the Rijksmuseum in Amsterdam, the Netherlands, which regards it as \\\"unquestionably one of the museum's finest attractions\\\".The exact year of the painting's completion is unknown, with estimates varying by source. The Rijksmuseum estimates it as circa 1658. According to the Metropolitan Museum of Art in New York City, it was painted in about 1657 or 1658. The \\\"Essential Vermeer\\\" website gives a broader range of 1658\u20131661."@en .
+<http://dbpedia.org/resource/Syndics_of_the_Drapers\u0027_Guild>	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Sampling Officials (Dutch: De Staalmeesters), also called Syndics of the Drapers' Guild, is a 1662 oil painting by Rembrandt. It is currently owned by the Rijksmuseum in Amsterdam. It has been described as his \\\"last great collective portrait\\\".The men (with the exception of Bel who is an attendant as indicated by his calotte) are drapers who were elected to assess the quality of cloth that weavers offered for sale to members of their guild.  Their one-year terms in office began on Good Friday and they were expected to conduct their inspections thrice weekly.  The Dutch word staal means 'sample' and refers to the samples of cloth that were assessed. The inspectors used pliers to press the seals of their city (front) and guild (reverse) into penny-sized slugs of lead that were specially affixed to record the results of the inspection.  There were four grades of quality, the highest was indicated by pressing four seals and the lowest by pressing only one.The men, who are appraising a length of Persian-style fabric against exemplars from a swatch book, are (from left to right):Jacob van Loon (1595\u20131674)Volckert Jansz (1605 or 1610\u20131681)Willem van Doeyenburg (ca. 1616\u20131687)Frans Hendricksz Bel (1629\u20131701)Aernout van der Mye (ca. 1625\u20131681)Jochem de Neve (1629\u20131681)The guild commissioned this portrait and it hung in their guild hall, the nl:Staalhof (Amsterdam), until 1771."@en .
+dbr:The_Feast_of_Saint_Nicholas	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Jan_Steen ;
+	dbo:abstractp	"The Feast of Saint Nicholas (Dutch: Het Sint Nicolaasfeest, c. 1665\u20131668), is a painting by Dutch master Jan Steen, which can now be found in the Rijksmuseum in Amsterdam. It measures 82 x 70.5 cm. The picture, painted in the chaotic Jan Steen \\\"style,\\\" depicts a family at home on December 5, the night celebrated in the Netherlands as the Feast of Saint Nicholas, or Sinterklaas.The focal point of the painting is the youngest daughter of the family, a golden-child, painted, in fact, in a golden smock and showing golden locks. She has behaved all year, and Saint Nicholas has rewarded her by stuffing her shoe with a doll and other treats, which she carries in her bucket. She is in stark contrast to her elder brother, standing to her right, who is sobbing, while another brother looks on, laughing. Apparently, the elder brother has been naughty, and his shoe, held up by an elder sister behind him, was left empty. Still there is hope for the sobbing boy. Hidden in the background, almost obscured by the draperies, his grandmother seems to beckon to him\u2014perhaps she is hiding a gift for him too, behind the heavy curtains. While the mother attempts to coax the golden girl to show her the gifts she received, the father, seated in the center of the painting, seems to smile as he remembers his own childhood on this festive night. Further to the right a child can be seen holding a baby and pointing up the chimney, while a younger child looks on in amazement, as he has probably just been told that this was Sinterklaas' method of gaining entry to the house."@en .
+dbr:The_Jewish_Bride	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Jewish Bride (Dutch: Het Joodse bruidje) is a painting by Rembrandt, painted around 1667.The painting gained its current name in the early 19th century, when an Amsterdam art collector identified the subject as that of a Jewish father bestowing a necklace upon his daughter on her wedding day. This interpretation is no longer accepted, and the identity of the couple is uncertain. The ambiguity is heightened by the lack of anecdotal context, leaving only the central universal theme, that of a couple joined in love.  Speculative suggestions as to the couple's identity have ranged from Rembrandt's son Titus and his bride, or Amsterdam poet Miguel de Barrios and his wife. Also considered are several couples from the Old Testament, including Abraham and Sarah, or Boaz and Ruth. The likeliest identification, however, is that of Isaac and Rebekah, as described in Genesis 26:8, and is supported by a drawing by the artist of the same theme.While technical evidence suggests that Rembrandt initially envisioned a larger and more elaborate composition, the placement of his signature at lower left indicates that its current dimensions are not significantly different from those at the time of its completion. According to Rembrandt biographer Christopher White, the completed composition is \\\"one of the greatest expressions of the tender fusion of spiritual and physical love in the history of painting.\\\"The painting is in the permanent collection of the Rijksmuseum Amsterdam."@en .
+dbr:Woman_with_a_Lute	dbp:museum	dbr:Metropolitan_Museum_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Woman with a Lute, also known as Woman with a Lute Near a Window, is a painting created about 1662\u20131663 by Dutch painter Johannes Vermeer and now at the Metropolitan Museum of Art in New York.The painting depicts a young woman wearing an ermine-trimmed jacket and enormous pearl earrings as she eagerly looks out a window, presumably expecting a male visitor. \\\"A musical courtship is suggested by the viola da gamba on the floor in the foreground and by the flow of songbooks across the tabletop and onto the floor,\\\" according to a web page about the work at the Metropolitan Museum of Art website. The tuning of a lute was recognized by contemporary viewers as a symbol of the virtue of temperance. The oil on canvas work is 20\u00BC inches high and 18 inches wide (51.4 \u00D7 45.7 cm). The painting's canvas was almost certainly cut from the same bolt as that used for  Lady Writing a Letter with her Maid.The work likely was painted shortly after than Young Woman with a Water Pitcher, and it shares with that painting its framing of the figure within rectangular motifs. But the painting has more muted tones, reflecting a shift in that direction by Vermeer in the mid- to late 1660s. At this time, Vermeer began using shadows and soft contours to further evoke an atmosphere of intimacy. \\\"The impression of spatial recession and atmosphere is somewhat diminished by darkening with age of the objects in the foreground and by abrasion of the paint surface, mostly in the same area,\\\" according to the Metropolitan Museum of Art web page.The painting was given to the museum in 1900 by a bequest of railroad industrialist Collis P. Huntington."@en .
+<http://dbpedia.org/resource/The_Concert_(Vermeer)>	dbp:museum	"Whereabouts unknown since the Isabella Stewart Gardner Museum theft in 1990"@en ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Concert (c. 1664) is a painting by Dutch painter Johannes Vermeer. The 69-centimeter-high by 63-centimeter-wide picture depicts a man and two women playing music. It belongs to the Isabella Stewart Gardner Museum in Boston, but was stolen in 1990 and remains missing. It is thought to be the most valuable unrecovered stolen painting, with a value estimated at over $200,000,000."@en .
+dbr:The_Geographer	dbp:museum	dbr:Städel ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Geographer is a painting created by Dutch artist Johannes Vermeer in 1668\u20131669, and is now in the collection of the St\u00E4delsches Kunstinstitut museum in Frankfurt, Germany."@en .
+dbr:Jacob_van_Ruisdael	dbo:movement	dbr:Dutch_Golden_Age_painting ;
+	dbo:abstracta	"Jacob Isaackszoon van Ruisdael (Dutch pronunciation: [\u02C8ja\u02D0k\u0254p v\u0251n \u02C8r\u0153ysda\u02D0l]; c. 1629 \u2013 10 March 1682) was a Dutch painter, draughtsman, and etcher. He is generally considered the pre-eminent landscape painter of the Dutch Golden Age, a period of great wealth and cultural achievement when Dutch painting became highly popular.Prolific and versatile, Ruisdael depicted a wide variety of landscape subjects. From 1646 he painted Dutch countryside scenes of remarkable quality for a young man. After a trip to Germany in 1650, his landscapes took on a more heroic character. In his late work, conducted when he lived and worked in Amsterdam, he added city panoramas and seascapes to his regular repertoire. In these, the sky often took up two-thirds of the canvas. In total he produced more than 150 Scandinavian views featuring waterfalls.Ruisdael's only registered pupil was Meindert Hobbema, one of several artists who painted figures in his landscapes. Hobbema's work has at times been confused with Ruisdael's. There is difficulty in attributing Ruisdael's work, which has not been helped by the fact that three members of his family were also landscape painters, some of whom spelled their name \\\"Ruysdael\\\": his father Isaack van Ruisdael, his well-known uncle Salomon van Ruysdael, and his cousin, confusingly called Jacob van Ruysdael.Ruisdael's work was in demand in the Dutch Republic during his lifetime. Today it is spread across private and institutional collections around the world; the National Gallery in London, the Rijksmuseum in Amsterdam, and the Hermitage Museum in St. Petersburg hold the largest collections. Ruisdael shaped landscape painting traditions worldwide, from the English Romantics to the Barbizon School in France, and the Hudson River School in the US, and influenced generations of Dutch landscape artists."@en .
+<http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Indianapolis)>	dbp:museum	dbr:Indianapolis_Museum_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"This 1629 self-portrait by Dutch painter Rembrandt van Rijn is part of the Clowes Fund Collection of the Indianapolis Museum of Art in Indianapolis, Indiana. It is among the earliest of his self-portraits (possibly the very first), of which he produced dozens over the course of four decades."@en .
+<http://dbpedia.org/resource/Dana\u00EB_(Rembrandt_painting)>	dbp:museum	dbr:Hermitage_Museum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Dana\u00EB is Rembrandt's painting from the collection of Pierre Crozat which since the 18th century has resided in the Hermitage Museum, St. Petersburg, Russia. It is a life-sized depiction of the character Dana\u00EB from Greek mythology, the mother of Perseus. She is presumably depicted as welcoming Zeus, who impregnated her in the form of a shower of gold. Given that this is one of Rembrandt's most magnificent paintings, it is not out of the question that he cherished it, but it also may have been difficult to sell because of its eight-by-ten-foot size. Although the artist's wife Saskia was the original model for Dana\u00EB, Rembrandt later changed the figure's face to that of his mistress Geertje Dircx."@en .
+<http://dbpedia.org/resource/Portrait_of_a_Young_Woman_(Vermeer)>	dbp:museum	dbr:Metropolitan_Museum_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Portrait of a Young Woman (also known as Study of a Young Woman, or Girl with a Veil) is a painting by the Dutch artist  Johannes Vermeer, completed between 1666 and 1667, and now in the Metropolitan Museum of Art, New York.Because of its near-identical size and its proximity in tone and composition, it is often considered to be either a variant or pendant painting (counterpart) of the artist's better-known Girl with a Pearl Earring. The subjects of both paintings wear pearl earrings, have scarves draped over their shoulders, and are shown in front of a plain black background. In addition, it is likely that the creation of both works involved the use of a camera obscura."@en .
+dbr:The_Jewish_Cemetery	dbp:museum	dbr:Detroit_Institute_of_Arts ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"The Jewish Cemetery (c. 1650s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Detroit Institute of Arts.This painting was documented by John Smith in 1835, who wrote: \\\"60. The Cemetery. This grand and affecting picture exhibits the ruins of a church and convent upon the summit of a hill, occupying the whole extent of the view in the second distance, the declivity of which presents a cemetery, interspersed with large stones. On the foreground are a broken tree lying across a rapid stream, a tomb of black marble, with an inscription on it; a row of three sarcophagi extending along the front; and on the left stands a cluster of large umbrageous trees, the verdant hues of whose foliage is contrasted by the leafless trunk of a beech. Three persons in black are seen near a small tomb on the side of the hill, musing amidst the tombs. The grandeur and solemnity of the scene is strikingly enhanced by rolling stormy clouds, in which may be perceived the evanescent colours of a rainbow. 4 ft. 6 in. by 5 ft. 9 in.\u2014C. In this excellent picture, the artist has evidently intended to convey a moral lesson of human life ; and in addition to this, there is a sublimity of sentiment and effect reigning throughout the composition which renders it worthy of the powers of Nicolo Poussin. Collection of M. Marin, . Paris, 1790. . 2000 fs. 80l. Anonymous, . . . . . . . . . . . . . 1802. . :3203 fs. 128l. The Writer has been informed that this picture was purchased by Mr. Huybens (by whom it was imported into England), of a banker at Paris, about the year 1815, for the sum of 20,000 fs., 800l., and sold to Mr. George Gillows, of whose executors it was brought by Mr. Zachary, and was subsequently sold, in the sale of that gentleman's collection, by Mr. Phillips, in 1828, for 870 gs. ; it is now in the possession of Mackintosh, Esq. A duplicate of the preceding picture, but differing in size, and inferior in quality, having become dark from time, is in the Dresden Gallery. 3 ft. by 3 ft. 5 in.\u2014C.\\\"This scene is very similar to other paintings of ruins Ruisdael made in this period and these often served as inspiration for later painters of landscape.\\t\\t\\t\\tLater historians have traced earlier drawings by Ruisdael and concluded that the scene is actually a pastiche of two locations; a view of the Jewish cemetery 'Beth Haim' in Ouderkerk aan de Amstel with the ruins of Egmond Abbey (St. Adalbert's Abbey) in Egmond-Binnen."@en .
+dbr:The_Night_Watch	dbp:museum	"Amsterdam Museum on permanent loan to the Rijksmuseum"@en ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Militia Company of District II under the Command of Captain Frans Banninck Cocq, also known as The Shooting Company of Frans Banning Cocq and Willem van Ruytenburch, but commonly referred to as The Night Watch (Dutch: De Nachtwacht), is a 1642 painting by Rembrandt van Rijn. It is in the collection of the Amsterdam Museum but is prominently displayed in the Rijksmuseum as the best known painting in its collection. The Night Watch is one of the most famous Dutch Golden Age paintings and is window 16 in the Canon of Amsterdam."@en .
+<http://dbpedia.org/resource/Artemisia_(Rembrandt)>	dbp:museum	dbr:Museo_del_Prado ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Artemisia Receiving Mausolus' Ashes (also known as Sophonisba Receiving the Poisoned Cup) is a painting by the Dutch master Rembrandt.  It is housed in the Museo del Prado of  Madrid, Spain. It is signed \\\"REMBRANDT F: 1634\\\".The subject of the picture is still unclear. It portrays a young woman, variously identified as Sophonisba or Artemisia, or a generic queen due to her jewels and rich garments, receiving a cup from a maiden. The cup would  contain the ashes of Artemisia's husband, King Mausolus, or, in the case of Sophonisba, the poison which killed her. For the woman, Rembrandt probably used his wife Saskia as model."@en .
+dbr:Portrait_of_Dirck_van_Os	dbp:museum	dbr:Joslyn_Art_Museum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Portrait of Dirck van Os is a later painting by Rembrandt (1606-1669), created circa 1658.  It is currently in the permanent collection of the Joslyn Art Museum in Omaha, Nebraska.In 1898 the portrait was acquired by a New York art dealer from a private collector in St. Petersburg, Russia.  In 1899 the portrait was sold to Boston businessman Frederick Sears.  The painting was purchased by the Joslyn Museum in 1942 from a private collection.  Initially believed to have been painted by Rembrandt himself, the painting was later reclassified as a painting from the \\\"School of Rembrandt\\\"; the likely work of one of Rembrandt's students.  In the spring of 2012, under the guidance of Ernst van de Wetering, one of the world's foremost authorities on Rembrandt, the museum sent the painting to Amsterdam for further study and treatment.  Martin Bijl, former head of restoration at the Rijksmuseum in Amsterdam, worked with van de Wethering on the painting's conservation.  The determination that the painting was a true Rembrandt was made during the conservation process.The subject depicted in the painting is Dirck van Os III (1590-1668), a prominent Dutch citizen.  He was the son of Dirck van Os (Antwerp 13 March 1556 \u2013 Amsterdam 20 May 1615), an Amsterdam merchant, insurer, financier and shipowner.  The elder van Os was one of the founders of the Compagnie van Verre, the Amsterdam Exchange Bank and the United East India Company (VOC).  The painting shows van Os as an elderly man, seated holding a cane in his left hand, donning a black robe with white collar and cuffs and wearing a cap.  During the restoration process it was determined that later additions to the painting included lace around the collar and a chain with a cross hanging from the subject's neck.  The embellishments were removed during the restoration process.The restored painting will be on permanent display in the Joslyn Art Museum's Hitchcock Foundation Gallery after its unveiling on May 5, 2014."@en .
+dbr:Aristotle_with_a_Bust_of_Homer	dbp:museum	dbr:Metropolitan_Museum_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Aristotle with a Bust of Homer, also known as Aristotle Contemplating a Bust of Homer, is an oil-on-canvas painting by Rembrandt.It was painted in 1653, as a commission from Don Antonio Ruffo, from Messina in Sicily, who did not request a particular subject.Aristotle, world-weary, looks at the bust of blind, humble Homer, on which he rests one of his hands. This has variously been interpreted as the man of sound, methodical science deferring to Art, or as the wealthy and famous philosopher, wearing the jeweled belt given to him by Alexander the Great, envying the life of the poor blind bard. It has also been suggested that this is Rembrandt's commentary on the power of portraiture.The interpretation of methodical science deferring to art is discussed at length in in which Held notes that Aristotle's right hand, traditionally the favored hand, is on the bust of Homer, is higher, and painted lighter than the left hand on the gold chain given to him by Alexander.The exact subject being portrayed in this portrait has been challenged in the book by Simon Schama titled Rembrandt's Eyes, applying the scholarship of Paul Crenshaw. Schama presents a substantial argument that it was the famous ancient Greek painter Apelles who is depicted in contemplation by Rembrandt and not Aristotle.It was purchased in 1961 for $2.3 million by the Metropolitan Museum of Art in New York City, USA. At the time this was the highest amount ever paid for any picture at public or private sale. During the renovation of the Rembrandt wing of the Metropolitan Museum, the painting was retitled in November 2013 as Aristotle with a Bust of Homer.The painting forms the central theme of Joseph Heller's 1988 novel Picture This."@en .
+dbr:The_Stoning_of_Saint_Stephen	dbp:museum	dbr:Museum_of_Fine_Arts_of_Lyon ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Stoning of Saint Stephen is the first signed painting by Dutch artist Rembrandt, painted in 1625 at the age of 19. It is currently kept in the Mus\u00E9e des Beaux-Arts de Lyon.This work is inspired by the martyrdom of Saint Stephen which is recounted in Acts 7. This young deacon in the Christian community of Jerusalem was sentenced to death by stoning. The painting was influenced by the art of Caravaggio and Adam Elsheimer. It represents the moment when Stephen was stoned outside the city by his many tormentors (about twenty characters), and he utters his last words to Christ as the light around him shows that the heavens are open.The painting is divided into two distinct zones with a diagonal creating an effect of chiaroscuro: on the left, a man on horseback is in the shadow, and on the right, Stephen and his persecutors are in the light. Saul of Tarsus can be seen seated in the background holding in his lap the coats of the stoners. Some inaccuracies in the drawing can be seen. The character behind Stephen seems to be a self-portrait done into a wider composition, as Spanish painter Diego Vel\u00E1zquez did in Las Meninas. John Durham suggests that Rembrandt \\\"presents himself as a somewhat alarmed presence, a participant who may be having second thoughts about what was taking place.\\\""@en .
+dbr:A_Lady_Writing_a_Letter	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"A Lady Writing a Letter (also known as A Lady Writing; Dutch: Schrijvend meisje) is an oil painting attributed to 17th century Dutch painter Johannes Vermeer. It is believed to have been completed around 1665. The Lady is seen to be writing a letter and has been interrupted, so gently turns her head to see what is happening. She wears twelve pearls (10 on the necklace and two earrings). Many of the objects seen in the painting, such as the woman's coat, the cloth on the table, and the string of pearls, also appear in other Vermeer works. This has led to speculation that he or his family members owned the objects, and even that the subjects of the paintings are his relatives. It has often been suggested that in his paintings, Vermeer sought to grant to his models that which he could not endow to his wife and family: calm and affluence.A Lady Writing a Letter was donated to the National Gallery of Art in Washington, D.C. in 1962 by Harry Waldron Havemeyer and Horace Havemeyer. In its first loan to the Norton Simon Museum, the National Gallery of Art agreed to lend the painting for exhibition at the Pasadena, California museum from November 7, 2008 through February 9, 2009.In Blue Balliett's children's book, Chasing Vermeer, A Lady Writing is stolen on its way from the National Gallery of Art to Chicago, causing the main conflict of the story."@en .
+dbr:Moses_Breaking_the_Tablets_of_the_Law	dbp:museum	<http://dbpedia.org/resource/Gem\u00E4ldegalerie,_Berlin> ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Moses Breaking the Tablets of the Law is a 1659 painting by the Dutch artist Rembrandt. It is now in the Gem\u00E4ldegalerie, Berlin."@en .
+dbr:Portrait_of_a_Young_Man_with_a_Golden_Chain	dbp:museum	dbr:São_Paulo_Museum_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Portrait of a Young Man with a Gold Chain is an oil painting usually attributed to the Dutch painter Rembrandt. Signed and dated 1635, it was traditionally regarded as a self-portrait (under the title Self-Portrait with Beard Rising or Self-Portrait with a Gold Chain), although contemporary criticism tends to challenge this hypothesis.The accreditation of this work to Rembrandt is old and supported by various documents and graphic records dating back to the seventeenth century. However, a report by the Rembrandt Research Project in 1989 assigned it to the \\\"circle\\\" of the Dutch master. This new assignment was controversial: the opinion was challenged by Pietro Maria Bardi and Luiz Marques, among other experts, who credit the authorship of the painting to Rembrandt. The work is currently preserved at the S\u00E3o Paulo Museum of Art."@en .
+dbr:Officer_and_Laughing_Girl	dbp:museum	dbr:Frick_Collection ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Officer and Laughing Girl, also known as Officer and a Laughing Girl, Officer With a Laughing Girl or De Soldaat en het Lachende Meisje, was painted by the Dutch artist Johannes Vermeer between 1655 and 1660. It was painted in oil on canvas, typical of most Dutch artists of the time, and is 50.5 by 46 cm. It now resides in The Frick Collection in New York.Officer and Laughing Girl includes many of the characteristics of Vermeer's style. The main subject is a woman in a yellow dress, light is coming from the left hand side of the painting from an open window, and there is a large map on the wall. Each of these elements occur in some of his other paintings, although this painting differs slightly with the man also sitting at the table. Art historians, who have suggested conflicting interpretations of the work, believe that a painting by Gerard van Honthorst inspired the composition, and that Vermeer used a camera obscura to create the perspective in this painting."@en .
+dbr:Ahasuerus_and_Haman_at_the_Feast_of_Esther	dbp:museum	dbr:Pushkin_Museum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The painting Ahasveros and Haman at the Feast of Esther is one of the few works of Rembrandt van Rijn whose complete provenance is known.  The origin of the painting can be traced back to 1662, two years after its completion."@en .
+<http://dbpedia.org/resource/The_Descent_from_the_Cross_(Rembrandt,_1650\u201352)>	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Descent from the Cross is a 1650\u201352 painting of the Descent from the Cross by Rembrandt, Constantijn van Renesse and Rembrandt's studio. It is now in the National Gallery of Art in Washington."@en .
+dbr:Johannes_Vermeer	dbo:movement	dbr:Dutch_Golden_Age_painting ;
+	dbo:abstracta	"Johannes, Jan or Johan Vermeer (/v\u0259r\u02C8m\u026A\u0259r/; Dutch: [jo\u02D0\u02C8\u0266\u0251n\u0259s j\u0251n v\u0259r\u02C8me\u02D0r]; 1632 \u2013 December 1675) was a Dutch painter who specialized in domestic interior scenes of middle-class life. Vermeer was a moderately successful provincial genre painter in his lifetime. He evidently was not wealthy, leaving his wife and children in debt at his death, perhaps because he produced relatively few paintings.Vermeer worked slowly and with great care, and frequently used very expensive pigments. He is particularly renowned for his masterly treatment and use of light in his work.Vermeer painted mostly domestic interior scenes. \\\"Almost all his paintings are apparently set in two smallish rooms in his house in Delft; they show the same furniture and decorations in various arrangements and they often portray the same people, mostly women.\\\"He was recognized during his lifetime in Delft and The Hague, but his modest celebrity gave way to obscurity after his death. He was barely mentioned in Arnold Houbraken's major source book on 17th-century Dutch painting (Grand Theatre of Dutch Painters and Women Artists), and was thus omitted from subsequent surveys of Dutch art for nearly two centuries.In the 19th century, Vermeer was rediscovered by Gustav Friedrich Waagen and Th\u00E9ophile Thor\u00E9-B\u00FCrger, who published an essay attributing 66 pictures to him, although only 34 paintings are universally attributed to him today. Since that time, Vermeer's reputation has grown, and he is now acknowledged as one of the greatest painters of the Dutch Golden Age."@en .
+dbr:Girl_with_a_Pearl_Earring	dbp:museum	dbr:Mauritshuis ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Girl with a Pearl Earring (Dutch: Meisje met de parel) is an oil painting by 17th-century Dutch painter Johannes Vermeer. It is a tronie of a girl with a headscarf and a pearl earring. The painting has been in the collection of the Mauritshuis in The Hague since 1902."@en .
+<http://dbpedia.org/resource/The_Astronomer_(Vermeer)>	dbp:museum	dbr:Louvre ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Astronomer is a painting finished in about 1668 by the Dutch painter Johannes Vermeer. It is oil on canvas, 51 cm x 45 cm (20 x 18 in), and is on display at the Louvre, Paris.Portrayals of scientists were a favourite topic in 17th century Dutch painting and Vermeer's oeuvre includes both this astronomer and the slightly later The Geographer. Both are believed to portray the same man, possibly Antonie van Leeuwenhoek.The astronomer's profession is shown by the celestial globe (version by Jodocus Hondius) and the book on the table, Metius's Institutiones Astronomicae Geographicae). Symbolically, the volume is open to Book III, a section advising the astronomer to seek \\\"inspiration from God\\\" and the painting on the wall shows the finding of Moses\u2014Moses may represent knowledge and science (\\\"learned in all the wisdom of the Egyptians\\\")."@en .
+<http://dbpedia.org/resource/The_Love_Letter_(Vermeer)>	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Love Letter (Dutch: De liefdesbrief) is a 17th-century genre painting by Jan Vermeer.  The painting shows a servant maid handing a letter to a young woman with a cittern.  The painting is in the Rijksmuseum Amsterdam."@en .
+dbr:The_Holy_Family_with_Angels	dbp:museum	dbr:Hermitage_Museum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Holy Family with Angels  (1645) is an oil painting on canvas by the Dutch landscape painter Rembrandt. It is an example of Dutch Golden Age painting and is now in the collection of the Hermitage Museum."@en .
+dbr:Self-Portrait_with_Two_Circles	dbp:museum	dbr:Kenwood_House ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Self-Portrait with Two Circles is an oil on canvas painting by the Dutch artist Rembrandt, painted c. 1659\u201360.In it, he is seen at work, holding his palette, brushes, and maulstick. The painting is notable for its monumentality and for an enigmatic background consisting of a shallow space with the fragments of two circles. It is the most ambitious self-portrait in which he is depicted at work and is considered a masterpiece of his last years."@en .
+dbr:Girl_Reading_a_Letter_at_an_Open_Window	dbp:museum	dbr:Gemäldegalerie_Alte_Meister ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Girl Reading a Letter at an Open Window is an oil painting by Dutch Baroque painter Johannes Vermeer. Completed in approximately 1657\u20131659, the well-preserved painting is on display at the Gem\u00E4ldegalerie in Dresden. For many years, the attribution of the painting\u2014which features a young Dutch woman reading a letter before an open window\u2014was lost, with first Rembrandt and then Pieter de Hooch being credited for the work before it was properly identified in 1880. After World War II, the painting was briefly in possession of the Soviet Union."@en .
+<http://dbpedia.org/resource/The_Abduction_of_Europa_(Rembrandt)>	dbp:museum	<http://dbpedia.org/resource/J._Paul_Getty_Museum> ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Rembrandt Harmenszoon van Rijn\u2019s The Abduction of Europa (1632) is one of his rare mythological subject paintings.  The piece is oil on canvas and now located in the J. Paul Getty Museum.  The inspiration for the painting is Ovid\u2019s Metamorphoses, part of which tells the tale of Zeus\u2019s seduction and capture of Europa.  The painting shows a coastal scene with Europa being carried away in rough waters by a bull while her friends remain on shore with expressions of horror.  Rembrandt combined his knowledge of classical literature with the interests of the patron in order to create this allegorical work.  The use of an ancient myth to impart a contemporary thought and his portrayal of the scene using the High Baroque style are two strong aspects of the work."@en .
+dbr:Landscape_with_Obelisk	dbp:museum	"Whereabouts unknown since the Isabella Stewart Gardner Museum theft in 1990"@en ;
+	dbo:artist	dbr:Govert_Flinck ;
+	dbo:abstractp	"Landscape with Obelisk is painting by Dutch artist Govert Flinck, painted in 1638. The oil-on-wood painting measures 54.5 by 71 centimetres (21.5 in \u00D7 28.0 in). It was formerly attributed to Rembrandt. The painting hung in the Isabella Stewart Gardner Museum of Boston, Massachusetts, United States, prior to being stolen in 1990."@en .
+dbr:A_Landscape_with_a_Ruined_Castle_and_a_Church	dbp:museum	dbr:National_Gallery ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"A Landscape with a Ruined Castle and a Church (c. 1665) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the National Gallery.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"136. Landscape with Cornfields, and Sheep and Figures. Sm. 214. A far-reaching view across an open plain varied with woods, meadows, and cornfields, villages and churches amid trees, cottages and windmills. In front are the ruins of a castle with a stagnant moat, fringed with trees and underwood. On the left a winding road passes a cornfield with sheaves and a group of trees and is lost in the distance. A shepherd sits on the old castle-wall, conversing with a youth seated on the ground, near a dog and three sheep. On a bastion, on the other side, are three sheep ; in a breach of the bastion stands a man. On a pool are three swans. The figures and cattle are by A. van de Velde. A thunderstorm has just passed over. In the sky are masses of rolling cloud, through which sunbeams fall on windmills in the distance. The rest of the landscape is in partial shadow. \\\"This capital picture may be cited as a chef d'oeuvre of the artist in this peculiar department of landscape-painting \\\" (Sm.). [Compare 775, 776.] Canvas, 43 inches by 57 inches. Exhibited at Manchester, 1857, No. 699, by R. Sanderson. Sale. Jan Gildemeester, Amsterdam, June 11, 1800, No. 190 (315 florins, Tays). In the collection of the Marquis de Marialva, Paris, 1825 ; bought privately by Sm. Sales. John Smith, London, 1828 (\u00A3472 : 10s.). Abrahams, London, 1831 (\u00A3275). In the collection of Richard Sanderson, London, 1835 (Sm.). Sale. R. Sanderson, London, June 17, 1848 (\u00A3504, Brown) ; but apparently bought in, for it was in the Sanderson collection in 1854 (Waagen, ii. 288), and was lent from it to Manchester in 1857. \\\"This scene is very similar to other paintings Ruisdael made in this period."@en .
+dbr:Portrait_of_a_Man_Rising_from_His_Chair	dbp:museum	dbr:Taft_Museum_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Portrait of a Man Rising from His Chair is a painting by the Dutch painter Rembrandt, painted in 1633.  It hangs in the Taft Museum of Art of Cincinnati, Ohio, United States. The oil on canvas portrait measures 124 by 99 centimetres (49 in \u00D7 39 in).  It is signed and dated 1633, and there is no doubt of its authenticity."@en .
+dbr:Self-portrait_as_the_Apostle_Paul	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Self-portrait as the Apostle Paul (Dutch: Zelfportret als de apostel Paulus) is a 1661 self-portrait by the Dutch artist Rembrandt. It is now in the Rijksmuseum in Amsterdam."@en .
+dbr:Self-portrait_wearing_a_white_feathered_bonnet	dbp:museum	dbr:Buckland_Abbey ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Self-portrait wearing a white feathered bonnet is an oil painting attributed to the Dutch painter Rembrandt. It is signed and dated 1635. It was traditionally regarded as a Rembrandt self-portrait until 1968, when it was rejected on stylistic grounds in the Rembrandt catalogue raisonn\u00E9 by Horst Gerson. On 18 March 2013 it was re-attributed to the master by Ernst van de Wetering."@en .
+dbr:Govert_Flinck	dbo:movement	dbr:Dutch_Golden_Age_painting ;
+	dbo:abstracta	"Govert (or Govaert) Teuniszoon Flinck (25 January 1615 \u2013 2 February 1660) was a Dutch painter of the Dutch Golden Age."@en .
+dbr:The_Ray_of_Light	dbp:museum	dbr:Louvre ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"The Ray of Light, also known as Le Coup de Soleil, (c. 1665) is an oil on canvas painting by the Dutch painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Louvre Museum.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"664. THE BURST OF SUNSHINE (\\\" Le Coup de Soleil \\\"). Sm. 11. A road leads diagonally across the picture from the left foreground to the right distance. On the left a horseman in a red cloak rides forward ; a beggar asks him for alms. A dog runs in front. In the centre the road crosses a stone bridge of four arches over a river to a ruined square tower with an archway. The broad river flows to the right, where three persons bathe near rocks in mid stream. On the farther bank are hills, with a ruined castle half-way up the slope. To the right is a wind-mill; farther back is a village with a church tower. A ray of sunlight, breaking through thick clouds, falls on a field in the left middle distance. The figures, though ascribed in the catalogue to Ph. Wouwerman, are by Ruisdael himself. The picture is strongly influenced by Rembrandt's landscapes, especially in composition. [Cf. 788.] Signed with the monogram on the left ; canvas, 33 inches by 39 inches. Engraved by Laurent in the Mus\u00E9e Fran\u00E7ais. In the collection of King Louis XVI. In the Louvre, Paris, 1902 catalogue, No. 2560; it was valued by the experts in 1816 (at 15,000 francs)\\\".Influences:"@en .
+dbr:The_Conspiracy_of_Claudius_Civilis	dbp:museum	dbr:Nationalmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Conspiracy of Claudius Civilis is a 1661\u201362 oil painting by the Dutch painter Rembrandt, which was originally the largest he ever painted, at around five by five metres in the shape of a lunette. The painting was commissioned by the Amsterdam city council for the Town Hall.  After the work had been in place briefly, it was returned to Rembrandt, who may have never been paid. Rembrandt drastically cut down the painting to a quarter of the original size to be sold. It is the last secular history painting he finished."@en .
+<http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Vienna)>	dbp:museum	dbr:Kunsthistorisches_Museum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Self Portrait (or The Large Self-Portrait) is an oil on canvas painting by the Dutch artist Rembrandt. Painted in 1652, it is one of at least 40 self-portraits painted by the artist, and was the first he had painted since 1645. In composition it is different from his previous self-portraits, depicting the painter in a direct frontal pose, hands on his hips, and with an air of self-confidence. It was painted the year that his financial difficulties began, and breaks with the sumptuous finery he had worn in previous self-portraits. Art historian Christopher White has called it \\\"one of the most magisterial and sombre of these (late) pictures\\\". It is in the Kunsthistorisches Museum in Vienna.The freely painted clothing includes a brown robe that was most likely casual working attire, secured with a sash, over a black doublet with an upturned collar. A drawing from c. 1650 shows Rembrandt in much the same pose and attire, and features an inscription, though not by the artist's hand, stating that these were the artist's studio clothes. In the drawing Rembrandt is seen wearing a top hat, while in the painting he wears a black beret derivative of artists' portraits of the 16th century.Following a period of seven years when he painted no self-portraits, focusing instead on landscapes and intimate domestic subjects, the Vienna Self Portrait inaugurated a prolific stretch in which Rembrandt painted an average of one self-portrait a year until his death in 1669. Contrary to the popular understanding that these paintings primarily represented a deeper personal interest in self-depiction, Ernst van de Wetering has proposed that they were painted specifically for connoisseurs who collected self-portraits by prominent artists.As in other late portraits and self-portraits by Rembrandt, a painted underlayer shows through in areas of shadow, here particularly in the eye sockets and beneath the moustache. Microscopic analysis has revealed that this is not the painted ground layer, which is a similar gray color, but a separate underlayer of paint. This local imprimatura, used in preparation for specific areas of the painting, was also practiced by Vermeer, and its purpose is not fully understood.A strong similarity has been noted to the self-portrait of c. 1655, also in the Vienna Kunsthistorisches Museum. The later work shares the frontal angle, lighting, and informal attire of the larger painting, though the artist's face appears older.A painting of Rembrandt' son Titus van Rijn, by another artist in the style of Rembrandt, duplicates the pose and positioning of the figure in the Self Portrait."@en .
+dbr:View_of_Delft	dbp:museum	dbr:Mauritshuis ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"View of Delft (Dutch: Gezicht op Delft) is an oil painting by Johannes Vermeer, painted ca. 1660\u20131661. The painting of the Dutch artist's hometown is among his most popular, painted at a time when cityscapes were not commonplace. It is one of three known paintings of Delft by Vermeer, along with The Little Street and the lost painting House Standing in Delft. The use of pointillism in the work suggests that it postdates The Little Street."@en .
+dbr:Woman_with_a_Pearl_Necklace	dbp:museum	<http://dbpedia.org/resource/Gem\u00E4ldegalerie,_Berlin> ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Woman with a Pearl Necklace by Johannes Vermeer is a seventeenth-century Northern European painting. Painted in oils on canvas, Johannes Vermeer portrayed a young Dutch woman, most likely of upper-class-descent, dressing herself with two yellow ribbons, pearl earrings, and a pearl necklace. As a very popular artist of the 17th century, the Dutch Golden Age, Vermeer depicted many women in similar circumstances within interior, domestic scenes. The same woman also appears in The Love Letter and A Lady Writing a Letter."@en .
+dbr:Woman_Holding_a_Balance	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Woman Holding a Balance, also called Woman Testing a Balance, is an oil painting by Dutch Baroque artist Johannes Vermeer. At one time the painting, completed 1662\u20131663, was known as Woman Weighing Gold, but closer evaluation has determined that the balance in her hand is empty. Opinions on the theme and symbolism of the painting differ, with the woman alternatively viewed as a symbol of holiness or earthliness."@en .
+dbr:A_Lady_and_Gentleman_in_Black	dbp:museum	"Whereabouts unknown since the Isabella Stewart Gardner Museum theft in 1990"@en ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"A Lady and Gentleman in Black is a painting by the Dutch artist Rembrandt, painted in 1633. The oil-on-canvas painting measures 131.6 by 109 centimetres (51.8 in \u00D7 42.9 in). The painting hung in the Isabella Stewart Gardner Museum of Boston, Massachusetts, prior to being stolen in 1990."@en .
+dbr:The_Allegory_of_Faith	dbp:museum	dbr:Metropolitan_Museum_of_Art ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Allegory of Faith, also known as Allegory of the Catholic Faith, is a painting created by Dutch artist Johannes Vermeer in about 1670\u201372. The painting is currently located at the Metropolitan Museum of Art in New York, and has been since 1931.This and Art of Painting are his only works that fall under history painting in the contemporary hierarchy of genres, though they still have his typical composition of one or two figures in a domestic interior. (The Art of Painting is Vermeer's only other allegory, painted earlier than Allegory of Faith.) Both share several features: the perspective is almost the same, and at the left of each painting is a multicolor tapestry pulled to the left to disclose the scene. The Art of Painting also uses symbolism from Cesare Ripa (of Clio, muse of history). Vermeer's Love Letter uses the same or a similar gilt panel. The Allegory and The Art of Painting differ markedly in style and purpose from Vermeer's other works. Both allegorical paintings show complex meaning, but Allegory of Faith \\\"reveals that the artist's usual focus on naturalistic effects was a stylistic option, to be set aside when the subject called for another approach\\\".  The Art of Painting still reads as a naturalistic depiction of an artist and his model, and the pose of the model is simple, whereas the pose of the figure in the The Allegory of Faith is  Baroquely dramatic."@en .
+dbr:Lady_Seated_at_a_Virginal	dbp:museum	dbr:National_Gallery ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Lady Seated at a Virginal, also known as Young Woman Seated at a Virginal, is a genre painting created by Dutch artist Johannes Vermeer in about 1670\u201372 and now in the National Gallery, London."@en .
+dbr:Old_Man_with_a_Gold_Chain	dbp:museum	dbr:Art_Institute_of_Chicago ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Old Man with a Gold Chain is a portrait by Rembrandt, painted around 1631 and now in the Art Institute of Chicago.This painting was documented by Hofstede de Groot in 1915, who wrote; \\\"675. HARMEN GERRITSZ VAN RIJN. Half-length, without hands ; almost life size. He is inclined to the left, but his head and eyes are turned to the right. He wears a dark purple cloak, over which hangs a gold chain with a medallion. Round his neck is a small close-fitting steel gorget. In his right ear is a pearl. He has a short greyish beard, and curly hair covered by a broad-brimmed black hat with two dark ostrich feathers. Painted about 1631. Signed on the left at foot with the monogram \\\"R H L\\\" ; canvas, 32 inches by 30 inches. There are copies : Bode 217 ; Wb. 156 ; B.-HdG. 29. Mentioned by Moes, No. 6687, ii; Bode, p. 413; Dutuit, p. 43 ; Michel, pp. 44, 557, 561 [35, 432, 443]. Sale. Beresford Hope, London, May 1886. In the possession of C. Sedelmeyer, Paris, \\\"Catalogue of 300 Paintings,\\\" 1898, No. 111. In the collection of W. H. Beers, New York. In the collection of S. Neumann, London.  Sale. Martineau and others, London, March 10, 1902.  Panel, 23 1/2 inches by 19 inches. Sale. Causid-Br\u00FCck of Cassel, Frankfort-on-Main, February 10, 1914, No. 25. Exhibited at D\u00FCsseldorf, 1912, No. 43. Sale. M. P. W. Boulton, London, December 9, 1911, No. 14. In the possession of P. and D. Colnaghi and Obach, London. In the possession of Julius B\u00F6hler, Munich. Sale. Marczell von Nemes of Budapest, Paris, June 17, 1913, No. 60 (516,000 francs, S. de Ricci). In the possession of Julius B\u00F6hler, Munich. In the possession of Reinhardt, New York. In a private collection, Chicago.\\\""@en .
+dbr:The_Baptism_of_the_Eunuch	dbp:museum	dbr:Museum_Catharijneconvent ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Baptism of the Eunuch is a 1626 painting by the Dutch artist Rembrandt van Rijn, owned by the Museum Catharijneconvent in Utrecht since 1976. It shows Philip the Evangelist baptising an Ethiopian man, a eunuch, on the road from Jerusalem to Gaza, traditionally marking the start of the Ethiopian Church (Acts 8:26-39)."@en .
+dbr:The_Prodigal_Son_in_the_Brothel	dbp:museum	dbr:Gemäldegalerie_Alte_Meister ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Prodigal Son in the Brothel is a painting by the Dutch master Rembrandt.  It is housed in the Gem\u00E4ldegalerie Alte Meister of  Dresden, Germany. It is signed \\\"REMBRANDT F.\\\".It portrays two people who had been identified as Rembrandt himself and his wife Saskia. In the Protestant contemporary world, the theme of the prodigal son was a frequent subject for works of art due to its moral background. Rembrandt himself painted a Return of the Prodigal Son in 1669.The left side of the canvas was cut, perhaps by the artist himself, to remove secondary characters and focus the observer's attention on the main theme."@en .
+<http://dbpedia.org/resource/The_Lacemaker_(Vermeer)>	dbp:museum	"Louvre, Paris"@en ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Lacemaker is a painting by the Dutch artist  Johannes Vermeer (1632\u20131675), completed around 1669\u20131670 and held in the Louvre, Paris. The work shows a young woman dressed in a yellow shawl, holding up a pair of bobbins in her left hand as she carefully places a pin in the pillow on which she is making her bobbin lace. At 24.5 cm x 21 cm (9.6 in x 8.3 in), the work is the smallest of Vermeer's paintings, but in many ways one of his most abstract and unusual. The canvas used was cut from the same bolt as that used for A Young Woman Seated at the Virginals, and both paintings seem to have had identical dimensions originally.The girl is set against a blank wall, probably because the artist sought to eliminate any external distractions from the central image. As with his The Astronomer (1668) and The Geographer (1669), it is obvious that the artist undertook careful study before he executed the work; the art of lacemaking is portrayed closely and accurately. Vermeer probably used a camera obscura while composing the work: many optical effects typical of photography can be seen, in particular the blurring of the foreground. By rendering areas of the canvas as out-of-focus, Vermeer is able to suggest depth of field in a manner unusual of Dutch Baroque painting of the era.In The Lacemaker, the artist presents in an abstract manner the various elements which compose the girl's face and body and the pattern of the material on which she is working. The girl's hands, the curls of her hair and the T-cross which form her eyes and nose are all described in an abstract manner unusual for the era in which Vermeer worked. In addition, the red and white of the lace is shown as spilling from the sewing cushion with physical properties suggesting a near liquid form. The blurring of these threads contrasts sharply with the precision of the lace she is shown working on.Vermeer's painting is often compared to a 1662 canvas of the same name by the Dutch portrait and genre painter Caspar Netscher. However, Vermeer's work is very different in tone. In the earlier work, both the girl's shoes and the mussel shells near her feet have sexual connotations. In addition, the discarded shoes in Netscher's painting are unlikely to be the girl's own, hinting again at a sexual overtone.According to the art historian Lawrence Gowing,\\\"The achievement of Vermeer's maturity is complete. It is not open to extension: no universal style is discovered. We have never the sense of abundance that the characteristic jewels of his century gives us, the sense that the precious vein lies open, ready to be worked. There is only one 'Lacemaker': we cannot imagine another. It is a complete and single definition.\\\""@en .
+dbr:A_Waterfall_in_a_Rocky_Landscape	dbp:museum	dbr:National_Gallery ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"A Waterfall in a Rocky Landscape (c. 1660s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the National Gallery.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"239. LANDSCAPE WITH WATERFALL. The waterfall fills the whole foreground, rushing down over rocks from a broad basin. In the left foreground a fallen tree hangs over the water. In the left middle distance is a wooden bridge, with firs and leafy trees to the left of it. To the right on the bank are leafy trees, one of which has fallen and hangs over the water. Behind the trees on a high bank is a cottage, with firs to the left of it. Dark cloudy sky. [Pendant to 240.] Signed in full, \\\"J. Ruysdael\\\" ; canvas, 40 1/2 inches by 34 inches. Engraved in mezzotint by J. G. Prestel. Sale. Count von Brabeck and Count Andreas von Stolberg of Soder, Hanover, October 31, 1859, No. 235 (\u00A31187 : 15 : 6, for the National Gallery). In the National Gallery, London, 1906 catalogue, No. 627.\\\"A Waterfall in a Rocky Landscape is very similar to other paintings he made between 1660 and 1670. Although the depicted landscape is of Scandinavia, Ruisdael was never recorded visiting foreign countries beyond Germany. From the middle of the 1650s he started to make a series of pictures of waterfalls over boulders, surrounded by high pine trees, inspired by the work of the artist Allaert van Everdingen, who had visited Norway and Sweden in 1644."@en .
+dbr:Two_Watermills_and_an_Open_Sluice_near_Singraven	dbp:museum	dbr:National_Gallery ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"Two Watermills and an Open Sluice near Singraven (c. 1650) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the National Gallery.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"148. THE WATER-MILLS. Sm. 17. In the left centre are two water-mills on either side of a stream flowing to the right front. The mill to the left is partly cut off by the frame and hidden by an oak tree. Between the mills are three water-wheels, two on the left and one on the right, with an open sluice-gate in the centre, through which the stream rushes down. A man stands on the footbridge above raising the gate. Behind the mill on the right is a tree. Beyond the sluice on the right bank is another house. On the left bank in front are reeds. In the right foreground is a tree-trunk in the water, with plants on the bank. A flight of steps goes up the right bank to a path up a hill, on the top of which, in the right distance, are a village church and a wind-mill amid trees. Cloudy sky. The same mills, seen from a nearer standpoint, but without the landscape on the right and with the right-hand mill in ruins, are represented in 157. Signed in full ; canvas, 34 inches by 43 1/2 inches. Sale. Thomas Emmerson, London, 1832 (504). In the collection of Wynn Ellis, 1854 (Waagen, ii. 297); bequeathed in 1876 to the National Gallery. In the National Gallery, London, Wynn Ellis bequest, 1906 catalogue, No. 986.\\\"This scene is very similar to other paintings Ruisdael made in this period of watermills and these often served as inspiration for later painters of landscape. This location has been determined to be Singraven, part of Dinkelland near Ootmarsum, subject of meer paintings by Ruisdael."@en .
+<http://dbpedia.org/resource/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp>	dbp:museum	dbr:Mauritshuis ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Anatomy Lesson of Dr. Nicolaes Tulp is a 1632 oil painting on canvas by Rembrandt housed in the Mauritshuis museum in The Hague, the Netherlands. Dr. Nicolaes Tulp is pictured explaining the musculature of the arm to medical professionals. Some of the spectators are various doctors who paid commissions to be included in the painting. The painting is signed in the top-left hand corner Rembrandt. f[ecit] 1632. This may be the first instance of Rembrandt signing a painting with his forename (in its original form) as opposed to the monogramme RHL (Rembrandt Harmenszoon of Leiden), and is thus a sign of his growing artistic confidence."@en .
+dbr:The_Art_of_Painting	dbp:museum	dbr:Kunsthistorisches_Museum ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Art of Painting, also known as The Allegory of Painting,  or Painter in his Studio, is a 17th-century oil on canvas painting by Dutch painter Johannes Vermeer. Many art historians believe that it is an allegory of painting, hence the alternative title of the painting. After Vermeer's Christ in the House of Martha and Mary it is the largest work by the master. Its composition and iconography also make it the most complex Vermeer work of all.This illusionistic painting is one of Vermeer's most famous. Svetlana Alpers describes it as unique and ambitious. Walter Liedtke describes it \\\"as a virtuoso display of the artist's power of invention and execution, staged in an imaginary version of his studio ...\\\" According to Albert Blankert \\\"No other painting so flawlessly integrates naturalistic technique, brightly illuminated space, and a complexly integrated composition.\\\"The painting is owned by the Austrian Republic and is on display in the Kunsthistorisches Museum in Vienna."@en .
+dbr:The_Little_Street	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"The Little Street (Het Straatje) is a painting by the Dutch painter Johannes Vermeer, executed c. 1657\u201358. It is exhibited at the Rijksmuseum of Amsterdam, and signed on the left hand corner below the window \\\"I V MEER\\\"."@en .
+dbr:Diana_and_Her_Companions	dbp:museum	dbr:Mauritshuis ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Diana and Her Companions is a painting by Dutch artist Johannes Vermeer completed in the early to mid-1650s, now at the Mauritshuis museum in The Hague. Although the exact year is unknown, the work may be the earliest painting of the artist still extant, with some art historians placing it before Christ in the House of Martha and Mary, some after.The painting's solemn mood is unusual for a scene depicting the goddess Diana, and the nymph washing the central figure's feet has captured the attention of critics and historians, both for her activity and contemporary clothing. Rather than directly illustrating one of the dramatic moments in well-known episodes from myths about Diana, the scene shows a woman and her attendants quietly at her toilette. The theme of a woman in a private, reflective  moment would grow stronger in Vermeer's paintings as his career progressed.Nothing of the work's history before the mid-19th century is known, and the painting was not widely accepted as one of Vermeer's until the early 20th century, when its similarities with Mary and Martha were noticed. About one ninth of the painting's width has been removed from the right side, and it was not discovered  until 1999 or 2000 was that the sky in the upper right-hand corner had been added in the 19th century."@en .
+dbr:The_Blinding_of_Samson	dbp:museum	dbr:Städel ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Blinding of Samson is a 1636 painting by Rembrandt, now in the St\u00E4del."@en .
+dbr:Self-Portrait_with_Beret_and_Turned-Up_Collar	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Self-Portrait with Beret and Turned-Up Collar is a 1659 oil on canvas painting by the Dutch artist Rembrandt. It has been noted as a self-portrayal of subtle and somber qualities, a work in which may be seen \\\"the stresses and strains of a life compounded of creative triumphs and personal and financial reverses\\\". Part of the Andrew W. Mellon Collection, it has been in the National Gallery of Art since 1937."@en .
+<http://dbpedia.org/resource/Christ_in_the_House_of_Martha_and_Mary_(Vermeer)>	dbp:museum	dbr:Scottish_National_Gallery ;
+	dbo:artist	dbr:Johannes_Vermeer ;
+	dbo:abstractp	"Christ in the House of Martha and Mary is a painting finished in 1655 by the Dutch painter Johannes Vermeer. It is housed in the National Gallery of Scotland in Edinburgh. It is the largest painting by Vermeer and one of the very few with an overt religious motive. The story of Christ visiting the household of the two sisters Mary and Martha goes back to the New Testament. The work has also been called Christ in the House of Mary and Martha (reversing the last two names)."@en .
+dbr:A_Young_Archer	dbp:museum	dbr:Wallace_Collection ;
+	dbo:artist	dbr:Govert_Flinck ;
+	dbo:abstractp	"A Young Archer is an oil painting, painted about 1640 by the Dutch Golden Age artist Govaert Flinck. The painting depicts a young black boy dressed as an archer. The painting is in the collection of the Wallace Collection, in London, England."@en .
+dbr:Rembrandt	dbo:movement	dbr:Dutch_Golden_Age_painting ;
+	dbo:abstracta	"Rembrandt Harmenszoon van Rijn (/\u02C8r\u025Bmbr\u00E6nt, -br\u0251\u02D0nt/; Dutch: [\u02C8r\u025Bmbr\u0251nt \u02C8\u0266\u0251rm\u0259(n)so\u02D0n v\u0251n \u02C8r\u025Bin]; 15 July 1606 \u2013 4 October 1669) was a Dutch painter and etcher. He is generally considered one of the greatest painters and printmakers in European art and the most important in Dutch history. His contributions to art came in a period of great wealth and cultural achievement that historians call the Dutch Golden Age when Dutch Golden Age painting, although in many ways antithetical to the Baroque style that dominated Europe, was extremely prolific and innovative, and gave rise to important new genres in painting.Having achieved youthful success as a portrait painter, Rembrandt's later years were marked by personal tragedy and financial hardships. Yet his etchings and paintings were popular throughout his lifetime, his reputation as an artist remained high, and for twenty years he taught many important Dutch painters. Rembrandt's greatest creative triumphs are exemplified especially in his portraits of his contemporaries, self-portraits and illustrations of scenes from the Bible. His self-portraits form a unique and intimate biography, in which the artist surveyed himself without vanity and with the utmost sincerity.In his paintings and prints he exhibited knowledge of classical iconography, which he molded to fit the requirements of his own experience; thus, the depiction of a biblical scene was informed by Rembrandt's knowledge of the specific text, his assimilation of classical composition, and his observations of Amsterdam's Jewish population. Because of his empathy for the human condition, he has been called \\\"one of the great prophets of civilization.\\\""@en .
+dbr:The_Dancing_Couple	dbp:museum	dbr:National_Gallery_of_Art ;
+	dbo:artist	dbr:Jan_Steen ;
+	dbo:abstractp	"The Dancing Couple is a 1663 oil painting by Jan Steen. It depicts a chaotic party with a dancing couple in the center. The work is currently in the Widener Collection of the National Gallery of Art in Washington, D.C.."@en .
+dbr:A_Mayor_of_Delft_and_his_Daughter	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Jan_Steen ;
+	dbo:abstractp	"A Mayor of Delft and his Daughter (1655) is the common name of an oil on canvas painting by the Dutch painter Jan Steen. It is an example of Dutch Golden Age painting and is part of the collection of the Rijksmuseum. Since 2006 it has been determined that a more historically correct title is Double portrait of Adolf Croeser (1612-1668) and his daughter Catharina Croeser (1642-....).This painting was documented by Hofstede de Groot in 1910, who wrote; \\\"878. SO-CALLED PORTRAIT OF THE BURGOMASTER OF DELFT AND HIS DAUGHTER. The man sits in the centre, upon the steps in front of his house ; he holds a sheet of paper. His daughter descends two steps to the left towards the spectator. The man is dressed in black ; the girl has a blue skirt and a greyish-purple gown. A beggar-woman in red, with a boy, addresses the man from the right. In the distance, to the right, is the tower of the Oude Kerk, at Delft ; to the left of the man's head is seen a small tower. A stone bridge, bearing the arms of the town, leads over the Oude Delft. To the left, in the window of the house, is a bouquet of flowers in a glass. The house projects slightly in front of the other houses in the street. The foliage of trees covers part of the picture. The picture is authentic, but not a masterpiece. The man's head is too large in relation to the girl. Since the sale of 1808 the picture has passed under the name of \\\" The Burgomaster of Delft and his Daughter.\\\" If the tradition is correct, the persons represented are Geraldo Briel van Welhoeck (1593-1665) with his daughter Anna, who was born in 1638, and married in 1656 Adriaan Bogaert van Beloys. Signed in the full on the edge of a step, and dated 1655 ; canvas, 32 1/2inches by 27 inches. Exhibited at the Royal Academy Winter Exhibition, London, 1882, No. 238. Sales. E. M. Engelberts and Tersteeg, Amsterdam, June 13, 1808, No. 142 (75 florins, Nieuwenhuys). Domsert, London, 1811 (88, Charlesson). Purchased by Edward, Lord Penrhyn, from the dealer, Nieuwenhuys. Now in the collection of Lord Penrhyn, Penrhyn Castle.\\\"This painting was featured on the cover of Simon Schama's 1987 book The Embarrassment of Riches. After over a century at Penrhyn Castle, the painting was sold to the Rijksmuseum in July 2004 for 11.9 million euro's whereupon it became the most expensive painting purchase for the museum. The British government delayed issuance of an export license to give British institutions the chance to buy the painting, but after the sole interested party withdrew their offer in August, the export license was issued. In 2006 research on the portrayed Delft cityscape and the people portrayed resulted in a title change. It had already been assumed for over a century that the man in the painting was not the mayor of Delft."@en .
+dbr:Landscape_with_Waterfall	dbp:museum	"Amsterdam Museum on loan to the Rijksmuseum"@en ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"Landscape with Waterfall (Dutch Landschap met waterval, in de verte een kerk)  (c. 1660s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Amsterdam Museum, on loan to the Rijksmuseum.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"198. A WATERFALL NEAR AN OAK WOOD. Sm. Suppl. 1. In the left foreground is a waterfall divided in the middle by a rock ; to the left is a tree-trunk lying half in the stream. In the right foreground is a rocky bank with a birch stem bent to the right. In the right middle distance is a great oak wood, traversed by a road on which stand a man and boy conversing with a woman who sits nursing a child. To the left of the road is the stream, through which two persons apparently men drive a flock of sheep. Beyond is a wooded slope. In the centre is a view over a cornfield with sheaves ; in the distance is a village with two wind-mills and a church. A fine evening, with rolling clouds and sunlight falling on the cornfield and wood. \\\"This excellent picture, in addition to its being one of the largest works of the artist, is singularly grand and rich in its composition, combined with unusual clearness and brilliancy of colouring and the most masterly execution, justly entitling it to the appellation of a chef d'oeuvre\\\" (Sm.). Signed in full on a stone on the right at foot ; canvas though the Amsterdam catalogue says it is on oak panel 56 inches by 76 1/2 inches. Exhibited at Amsterdam, 1845, No. 134. Bought by an ancestor of Sir Charles Blount, Bart., on the Continent about the year 1740 (Sm.). In the collection of Sir Charles Blount, Bart., who sold it to Sm. in 1836. Sold by Sm. to A. van der Hoop, Amsterdam, 1837 (for 1450). Bequeathed by A. van der Hoop to Amsterdam with his collection in 1854. In the Rijksmuseum, Amsterdam, Van der Hoop bequest, 1910 catalogue, No. 2075.\\\"This scene is very similar to other paintings Ruisdael made of waterfalls. As a warning of the forces of nature, these often included logs or broken tree stumps as silent witness to a more flooded scene than the one depicted. These must have sold well, as most of what remains today of Ruisdael's oeuvre are waterfall scenes. Inspired by the dramatic works of Allaert van Everdingen, Ruisdael also made more nordic versions (such as A Waterfall in a Rocky Landscape), which included pine trees and mountains."@en .
+dbr:Mountain_Landscape_with_a_Watermill	dbp:museum	dbr:Hermitage_Museum ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"Mountainous Landscape (c. 1675-1679) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Hermitage.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"155. A WATER-MILL IN A NORWEGIAN LANDSCAPE. Sm. 307. A dark rocky landscape is intersected by a river, on which are a raft of timber and a small sailing-boat. To the right, on the farther bank, are a cottage, a pile of timber, and a mill. Near the centre is a castle on a rocky hill. Farther to the left in the distance is a lofty conical hill, the top of which is hidden in cloud. One of Ruisdael's most important pictures. Probably an evening effect, but very much darkened by time. Attributed in the 1838 catalogue to Salomon van Ruisdael. Canvas, 40 inches by 43 inches. Engraved by P. E. Moitte in the Br\u00FChl collection. In the collection of Count Br\u00FChl. In the Hermitage Palace, St. Petersburg, 1901 catalogue, No. 1147; it was there in 1835 (Sm., who valued it at \u00A3300).\\\"This scene is very similar to other paintings Ruisdael made in this period and these often served as inspiration for later painters of landscape."@en .
+dbr:Pendant_portraits_of_Maerten_Soolmans_and_Oopjen_Coppit	dbp:museum	"Louvre and Rijksmuseum"@en ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"The Pendant portraits of Maerten Soolmans and Oopjen Coppit are a pair of full-length wedding portraits by Rembrandt. Formerly owned by the Rothschild family, they became jointly owned by the Louvre Museum and the Rijksmuseum in 2015 after both museums managed to contribute half of the purchase price of \u20AC160 million, a record for works by Rembrandt."@en .
+dbr:Portrait_of_Maerten_Soolmans	dbp:museum	"Rijksmuseum and Louvre"@en ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Portrait of Maerten Soolmans (1613-1641) is a painting by the Dutch Golden Age painter Rembrandt, painted on the occasion of his marriage to Oopjen Coppit in 1634 and in 2015 purchased from the Rothschilds as part of a joint collaboration between the Rijksmuseum and the Louvre. It is considered a pendant portrait, and the portrait of his wife was included in the sale. Together the paintings were sold for 160 million euro's."@en .
+dbr:Portrait_of_Maria_Trip	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Portrait of Maria Trip (c.1639) is an oil on panel painting by the Dutch landscape painter Rembrandt.It is an example of Dutch Golden Age painting and is now in the collection of the Rijksmuseum.This painting was documented by Hofstede de Groot in 1915, who wrote; \\\"845. A YOUNG WOMAN AT A STONE BALUSTRADE. Bode 19 ; Dut. 283 ; Wb. 352 ; B.-HdG. 274. About thirty-five. Half-length ; life size. She stands, inclined to the left, and looks at the spectator. She holds her fan in her left hand, which rests on the balustrade. Her brown hair is uncovered and falls in ringlets on her brow. Her figured black silk gown is cut out at the throat and trimmed with rosettes ; over it is a triple collar of rich lace, lying flat. She has rich pearls in her ears, on her bosom, round her neck, and on her wrists. A small jewelled medallion is suspended from a black ribbon. Her right hand hangs at her side. She stands in front of a recess with a caryatid to the left ; behind her is a dark curtain. Full daylight falls from the front. Corrections are visible on the lower edge, where there was once a table, and there were large buttons on the left sleeve. Signed on the left at foot, \\\"Rembrandt f. 1639\\\"; cedar panel, 42 inches by 32 inches. A carefully executed pen-sketch for this picture is in the British Museum Print Room ; reproduced, HdG. iv. 88. Etched by L. Flameng in the Gazette des Beaux-Arts, and in Dutuit, iii. Mentioned by Vosmaer, pp. 170, 520; Bode, pp. 459, 559; Dutuit, p. 54; Michel, pp. 213, 565 [163-4, 440]. Exhibited at Amsterdam, 1872 and 1898, No. 44; Brussels, 1882, No. 216 ; The Hague, 1890, No. 85 ; Utrecht, 1894, No. 417. In the Van Weede van Dijkveld collection, Utrecht. Exhibited on loan since 1896 in the Rijksmuseum, Amsterdam, 1911 catalogue, No. 2022.\\\".The painting was researched by Isa van Eeghen in the 20th-century who discovered that it was a portrait of Maria Trip, the wife of Balthasar Coymans."@en .
+dbr:Portrait_of_Oopjen_Coppit	dbp:museum	"Rijksmuseum and Louvre"@en ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"Portrait of Oopjen Coppit (1611-1689) is a painting by the Dutch Golden Age painter Rembrandt, painted on the occasion of her marriage to Maerten Soolmans in 1634. It is considered a pendant portrait, and portrait of her husband was included in the 2015 sale as part of a joint collaboration between the Rijksmuseum and the Louvre, purchased from the Rothschild family. The paintings were jointly sold for \u20AC 160 million."@en .
+dbr:Rough_Sea_at_a_Jetty	dbp:museum	dbr:Kimbell_Art_Museum ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"Rough Sea at a Jetty (c. 1650s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Kimbell Art Museum.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"945. A ROUGH SEA, Sm. 2. A storm is coming on. In the centre foreground the waves dash on two jetties. Near a beacon at the end of one jetty, two men with long poles wait to help a fishing-boat which is running under full sail for the harbour. Two other boats ride at anchor near the jetty, to the right. Dark cloudy sky. A \\\" magnificent picture \\\" (Sm.). Canvas, 37 inches by 51 inches. Another example, equally genuine, was in the possession of the London dealers Agnew. Exhibited at the Royal Academy Winter Exhibition, London, 1884, No. 191. Sales. Antony Sijdervelt, Amsterdam, April 23, 1766 (Terw. 519), No. 49 (250 florins, Loquet). Gerard Braamcamp, Amsterdam, July 31, 1771, No. 198 (264 florins, P. Fouquet). Paillet, Paris, July 19, 1802 (1460 francs). Bought privately by Sm. from the family of the Marquis Merialva, 1824 (for 9000 francs), and sold to the Earl of Liverpool (for \u00A3500). Sale. Earl of Liverpool, London, March 25, 1829 (\u00A3535 Lord Lansdowne). In the collection of the Marquess of Lansdowne, Bowood.\\\"This scene is very similar to other paintings Ruisdael made in this period and these often served as inspiration for later painters of seascape."@en .
+<http://dbpedia.org/resource/The_Watermill_(Ruisdael)>	dbp:museum	dbr:National_Gallery_of_Victoria ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"The watermill (c. 1660) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the National Gallery of Victoria.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"146. THE WATER-MILL. View across the mill-pool towards the water-mill, which stands amid trees. The same mill as that painted by Hobbema, as, for example, in the two pictures at the Rijksmuseum (see Hobbema, 66, 67). The building on the right is roofed with red tiles, and the timbers are grey. To the left is a green hill. There is no distant view. On the road to the left is a man, followed by a dog. To the right is a flowering elder bush. To judge from the style, the picture was probably painted about the time when Hobbema and Ruisdael worked together (1660-63). Signed with the monogram on the left ; canvas, 25 inches by 27 1/2 inches. Exhibited at the Royal Academy Winter Exhibition, London, 1876, No. 80, and 1902, No. 134. In the collection of the Right Hon. Lewis Fry, Clifton, Bristol. \\\"This scene is very similar to other paintings Ruisdael and his pupil Hobbema made in this period and these often served as inspiration for later painters of landscape.\\t\\t\\t\\tScholars have tried to locate this specific watermill as it was portrayed so many times, but so far is has only been documented as being \\\"somewhere in Gelderland.\\\""@en .
+dbr:View_of_Bentheim_Castle	dbp:museum	dbr:Rijksmuseum ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"View of Bentheim Castle (c. 1650s) is an oil on canvas painting of Burg Bentheim by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Rijksmuseum.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"21. THE CASTLE OF BENTHEIM. Sm. 16. The castle stands in the left middle distance on the rocky summit of a hill. To the right is a valley through which runs a road. In front are masses of rock between which flows a stream forming a little waterfall. On the left bank a shattered tree-trunk, beside the stump, lies diagonally across the stream. Farther back the stream widens ; on the left bank a shepherd drives his sheep forward. A fine picture, full of light. [Pendant to 319.] Signed in full to the right on a rock ; canvas, 27 inches by 21 inches. Engraved by W. Unger. Sales. G. G. Baron Taets van Amerongen, Amsterdam, July 3, 1805, No. 35 (750 florins, Josi). p. de Smeth van Alphen, Amsterdam, August i, 1810, No. 86 (740 florins, Coclers) ; pendant to No. 85. In the Rijksmuseum, Amsterdam, 1910 catalogue, No. 2080; it was there in 1835 (Sm., who valued it at \u00A3 350).\\\"This scene is very similar to other paintings Ruisdael made in this period of Burg Bentheim and these often showed the castle on a high hill, though in reality it is only slightly elevated above the surrounding plain.\\t\\t\\t\\tLittle is known of Ruisdael's trip to Bentheim. It is speculated that he took a grand tour like many of his contemporaries did, but they were mostly interested in travel to Italy and headed southwards, not eastwards as Ruisdael had done. Sources are unclear about the reason the artist would travel to Bentheim to paint it. Bentheim is a small German town near the Dutch border about 26 kilometers beyond Ootmarsum, a town Ruisdael painted, and adjoins the town of Sch\u00FCttorf, which Ruisdael sketched from across the river Vechte. In those days, people of Haarlem and Amsterdam were more likely to travel by foot or by trekschuit than by horse and buggy. Ruisdael's paintings also often show people walking along sandy tracks or traveling in boats, but only the cart tracks in his paintings show the traffic from other forms of transport. If he travelled eastwards by boat, then this could explain why he made so many sketches of water mills and sluices. There has been speculation that Ruisdael accompanied an expedition to acquire Bentheimer sandstone for building the new Amsterdam Town Hall, an ambitious project by mayor Nicolaes Tulp that employed many artists, including the Haarlem architect Jacob van Campen as master builder. Bentheimer sandstone was a popular product being used to build canal mansions along the new canals of Amsterdam. In Haarlem, the facade of the house of Pieter Teyler van der Hulst is cladded with Bentheimer sandstone, and though this was probably done later in the 1740s, it shows hows the popularity of this material overshadowed the use of Namur stone from Belgium, the material used earlier in the 17th-century for cladding of the Waag, Haarlem, which is a few doors down from Teyler's house. However it is also entirely plausible that Ruisdael was invited to the castle to paint it, but little is known of the art collection in the castle at that time.Ruisdael was even tempted to make a dramatic sweeping version of the castle that was copied almost in mirror image by Haarlem contemporary Nicolaes Berchem, called \\\"his great friend\\\" by Ruisdael biographer Arnold Houbraken. It is assumed that the artists travelled together, but no archival evidence beyond dated artworks survive which support this."@en .
+dbr:View_of_Egmond_aan_Zee	dbp:museum	dbr:Nationalmuseum ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"View of Egmond aan Zee (c. 1650s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Nationalmuseum in Stockholm.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"50. VIEW OF EGMOND AAN ZEE. The village lies in the middle distance, with the sea beyond. The church with its stumpy square tower rises above the houses. In the foreground is a sunlit road through the dunes. The sun's rays also fall on the sea and on a sailing-boat to the right. Blue sky with clouds. A variation of 47. Signed on the left with the monogram ; panel, 12 inches by 14 inches. Etched by L. Lowenstam and R. Norstedt. In the collection of Louisa Ulrica, Queen of Sweden, and there attributed to Rembrandt. In the collection of Gustavus III., King of Sweden. In the National Museum, Stockholm, 1900 catalogue, No. 618.\\\"This scene is very similar to other paintings Ruisdael made of Egmond aan Zee and these were perhaps popular because the townsfolk already knew that erosion was threatening their village and had moved their homes and businesses further land inwards. The choir of the church was already in ruins and the tower was in use as a beacon for ships. Storms had steadily eroded the coast since a major flood in 1570 and in the 18th century the village as it is depicted here definitely disappeared in the waves. As a ghost town it was something of an early tourist attraction. Today the modern town is also threatened, as the coast is still eroding further eastwards."@en .
+dbr:View_on_the_Amstel_from_Amsteldijk	dbp:museum	dbr:Amsterdam_Museum ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"View on the Amstel from Amsteldijk (c. 1680) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the Amsterdam Museum.This painting was purchased in 2007 with support from the Vereniging Rembrandt as an important artifact of Amsterdam history. It was documented by Hofstede de Groot in 1911, who wrote; \\\"17. View of Amsterdam. The Amstel fills the right-hand side of the picture. In the centre is a canal bordered by a meadow. A ray of light illumines the town. In the sky are masses of storm-cloud. Canvas. Sale. Comte de Morny, Paris, May 24, 1852, No. 24 (3100 francs).\\\"According to Vereniging Rembrandt, the steeples in this painting are from left to right: Leidsepoort, Utrechtsepoort, Westerkerk, Stadhuis (Dam), Oude Kerk, Zuiderkerk, Portugees-Joodse Synagoge, 's Lands zeemagazijn, Weesperpoort, Oosterkerk. All of these buildings had been recently designed and built under the supervision of the city architect Dani\u00EBl Stalpaert.This scene is very similar to other paintings Ruisdael made in this period of Amsterdam and these often served as inspiration for later painters of landscape."@en .
+dbr:Winter_Landscape_near_Haarlem	dbp:museum	dbr:Städel ;
+	dbo:artist	dbr:Jacob_van_Ruisdael ;
+	dbo:abstractp	"Winter Landscape near Haarlem (c. 1670s) is an oil on canvas painting by the Dutch landscape painter Jacob van Ruisdael.It is an example of Dutch Golden Age painting and is now in the collection of the St\u00E4del.This painting was documented by Hofstede de Groot in 1911, who wrote; \\\"992. A WINTER LANDSCAPE. A snow-bound plain with trees to right and left. In the centre a road leads to the distance ; away to the right is a cottage. In the centre foreground stands a solitary lamp-post. To the left of this are two travellers with a dog. Signed in full, according to the Sedelmeyer sale-catalogue, but the Frankfort catalogue does not mention a signature ; canvas, 14 1/2 inches by 12 1/2 inches. Exhibited at Vienna, 1873, No. 165. Sales. C. Sedelmeyer, Vienna, December 20, 1872, No. 144. Lippmann von Lissingen of Vienna, Paris, March 16, 1876, No. 38 ; bought for the Institute by the Frankfort Art Union. In the Stadel'sches Kunstinstitut, Frankfort -on -Main, 1900 catalogue, No. 272.\\\"This scene is very similar to other paintings Ruisdael made in this period and these often served as inspiration for later painters of winter landscape.\\t\\t\\t\\tThe lamp post in the painting has been identified as the invention of Jan van der Heyden which is the reason the painting can be dated to after 1670. Such lamp posts appear in other Ruisdael paintings as well."@en .
+<http://dbpedia.org/resource/St._Matthew_and_the_Angel>	dbp:museum	dbr:Louvre ;
+	dbo:artist	dbr:Rembrandt ;
+	dbo:abstractp	"St. Matthew and the angel (c. 1661) is an oil on canvas painting by the Dutch landscape painter Rembrandt.It is an example of Dutch Golden Age painting and is now in the collection of the Louvre.This painting was documented by Hofstede de Groot in 1914, who wrote; \\\"173. ST. MATTHEW THE EVANGELIST. Sm. 136; Bode 270 ; Dut. 102 ; Wb. 276 ; B.-HdG. 521. He sits behind a table with a book open before him, and gazes thoughtfully into the distance. He is turned three-quarters right, and wears a coloured cap. His left hand is at his untrimmed and tangled beard ; his right hand, holding a pen, rests on the book. He wears a loose chestnut-brown robe. An angel with rich fair curls at the back to the left lays his right hand on the evangelist's right shoulder and speaks to him. Half-length, life size. Cf. 172 and 174-5. Signed in the right centre, \\\"Rembrandt f. 1661 \\\"; canvas, 38 inches by 32 inches. Mentioned by Vosmaer, pp. 361, 562 ; by Bode, pp. 523, 594 ; by Dutuit, p. 35 ; by Michel, pp. 463, 562 [361-2, 434]. Etched by Claessens in the Mus\u00E9e Francais ; by Oortman in the Mus\u00E9e Napol\u00E9on, in Filhol, viii. 509, and Landon, ii. 57. In the Louvre, Paris, 1907 catalogue, No. 2538.\\\"Rembrandt was influenced in his arrangement with the angel acting as an assistant by an earlier work by Frans Hals:"@en .
+  dbr:Jan_Nieuwenhuys	dbo:movement	<http://dbpedia.org/resource/COBRA_(avant-garde_movement)> .
+  dbr:Samuel_Dirksz_van_Hoogstraten	dbo:movement	dbr:Baroque .
+  dbr:Hendrick_Bloemaert	dbo:movement	dbr:Baroque .
+  dbr:Heiman_Dullaart	dbo:movement	dbr:Baroque .
+  dbr:Adriaen_Hanneman	dbo:movement	dbr:Baroque .
+  dbr:Jaap_Schreurs	dbo:movement	dbr:Neo-figurative .
+  dbr:Ambrosius_Bosschaert	dbo:movement	dbr:Dutch_Golden_Age ,
+  		dbr:Baroque .
+  dbr:Johan_Thorn_Prikker	dbo:movement	dbr:Art_Nouveau .
+  dbr:Karel_Dujardin	dbo:movement	dbr:Dutch_Golden_Age_painting .
+  dbr:Wouter_Crabeth_I	dbo:movement	dbr:Renaissance .
+  dbr:Pieter_Soutman	dbo:movement	dbr:Baroque .
+  dbr:Willem_de_Poorter	dbo:movement	dbr:Baroque .
+  dbr:Pieter_de_Neyn	dbo:movement	dbr:Baroque .
+  dbr:Frits_Lugt	dbo:movement	dbr:Baroque .
+  dbr:Abraham_Bloemaert	dbo:movement	dbr:Northern_Mannerism ,
+  		dbr:Dutch_Baroque_painting .
+  dbr:Jan_Baptist_Weenix	dbo:movement	dbr:Dutch_Golden_Age .
+  dbr:Frederik_de_Moucheron	dbo:movement	dbr:Baroque .
+  dbr:Maarten_van_Heemskerck	dbo:movement	dbr:Mannerism .
+  dbr:Willem_van_Veldhuizen	dbo:movement	<http://dbpedia.org/resource/Hyperrealism_(painting)> .
+  dbr:Anton_Mauve	dbo:movement	<http://dbpedia.org/resource/Realism_(art)> .
+  dbr:Kees_van_Dongen	dbo:movement	dbr:Fauvism .
+  dbr:Maria_Tesselschade_Visscher	dbo:movement	dbr:Dutch_Golden_Age .
+  dbr:Carel_Willink	dbo:movement	dbr:Magic_realism .
+  dbr:Hendrik_Martenszoon_Sorgh	dbo:movement	dbr:Baroque .
+  dbr:Willem_Pieterszoon_Buytewech	dbo:movement	dbr:Baroque .
+  dbr:Adriaen_van_de_Venne	dbo:movement	dbr:Baroque .
+  dbr:Willem_Drost	dbo:movement	dbr:Baroque .
+  <http://dbpedia.org/resource/Jan_Cox_(painter)>	dbo:movement	<http://dbpedia.org/resource/COBRA_(avant-garde_movement)> .
+  dbr:Pieter_Claesz	dbo:movement	dbr:Baroque .
+  dbr:Govert_van_der_Leeuw	dbo:movement	dbr:Dutch_Golden_Age_painting .
+  dbr:Philip_van_Dijk	dbo:movement	dbr:Baroque .
+  dbr:Lucebert	dbo:movement	<http://dbpedia.org/resource/COBRA_(avant-garde_movement)> .
+  dbr:Pieter_Janssens_Elinga	dbo:movement	dbr:Baroque .
+  dbr:Karel_Appel	dbo:movement	<http://dbpedia.org/resource/COBRA_(avant-garde_movement)> ,
+  		dbr:Experimentele_Groep_in_Holland .
+  dbr:Simon_Vestdijk	dbo:movement	dbr:Modernism .
+  dbr:Jan_Vermeer_van_Utrecht	dbo:movement	dbr:Baroque .
+  dbr:Lambert_Sustris	dbo:movement	dbr:Mannerism .
+  dbr:Jan_Gerritsz_van_Bronckhorst	dbo:movement	dbr:Baroque .
+  dbr:Jan_Porcellis	dbo:movement	dbr:Marine_art .
+  dbr:Anthonie_Blocklandt_van_Montfoort	dbo:movement	dbr:Mannerism .
+  dbr:Pauwels_van_Hillegaert	dbo:movement	dbr:Baroque .
+  dbr:Pieter_Jansz_van_Asch	dbo:movement	dbr:Baroque .
+  dbr:Werner_van_den_Valckert	dbo:movement	dbr:Baroque .
+  dbr:Jan_Claesz_Rietschoof	dbo:movement	dbr:Baroque .
+  dbr:Bernardus_van_Schijndel	dbo:movement	dbr:Baroque .
+  dbr:Cornelis_Brisé	dbo:movement	dbr:Baroque .
+  dbr:Johannes_van_Haensbergen	dbo:movement	dbr:Baroque .
+  dbr:Jacob_van_der_Ulft	dbo:movement	dbr:Baroque .
+  dbr:Jacob_de_Gheyn_III	dbo:movement	dbr:Baroque .
+  dbr:Matthijs_Naiveu	dbo:movement	dbr:Baroque .
+  dbr:Toos_van_Holstein	dbo:movement	dbr:Expressionistic .
+  dbr:Alexander_Weygers	dbo:movement	dbr:Sustainable_living .
+  dbr:Andreas_Schelfhout	dbo:movement	dbr:Romantic_movement .
+  dbr:Dirk_van_Hoogstraten	dbo:movement	dbr:Baroque .
+  dbr:Frans_Post	dbo:movement	dbr:Baroque .
+  dbr:Hendrik_Scheffer	dbo:movement	dbr:Romanticism .
+  dbr:Job_Adriaenszoon_Berckheyde	dbo:movement	dbr:Baroque .
+  dbr:Jan_Griffier	dbo:movement	dbr:Baroque .
+  dbr:Dirck_Helmbreker	dbo:movement	dbr:Baroque .
+  dbr:Pieter_Feddes_van_Harlingen	dbo:movement	dbr:Baroque .
+  dbr:Aert_van_Waes	dbo:movement	dbr:Baroque .
+  dbr:Cornelis_Bisschop	dbo:movement	dbr:Baroque .
+  dbr:Jan_Hackaert	dbo:movement	dbr:Baroque .
+  dbr:Benjamin_Prins	dbo:movement	dbr:Genre_works .
+  dbr:Adriaen_Backer	dbo:movement	dbr:Baroque .
+  dbr:Willem_Thibaut	dbo:movement	dbr:Mannerist .
+  dbr:Augustinus_Terwesten	dbo:movement	dbr:Baroque .
+  dbr:Michiel_van_Musscher	dbo:movement	dbr:Baroque .
+  dbr:Pieter_Cornelisz_van_Slingelandt	dbo:movement	dbr:Fijnschilder .
+  dbr:Hendrick_Goudt	dbo:movement	dbr:Baroque .
+  dbr:Adolph_Artz	dbo:movement	dbr:Hague_School .
+  dbr:Cornelis_Pietersz_Bega	dbo:movement	dbr:Baroque .
+  dbr:Vincent_van_der_Vinne	dbo:movement	dbr:Baroque .
+  dbr:Abraham_Lambertsz_van_den_Tempel	dbo:movement	dbr:Baroque .
+  dbr:Christoffel_Pierson	dbo:movement	dbr:Baroque .
+  dbr:Lambert_Doomer	dbo:movement	dbr:Baroque .
+  dbr:Dirk_Dalens	dbo:movement	dbr:Baroque .
+  dbr:Jacob_Campo_Weyerman	dbo:movement	dbr:Baroque .
+  dbr:Isaac_van_Swanenburg	dbo:movement	dbr:Renaissance .
+  dbr:Johannes_van_der_Bent	dbo:movement	dbr:Baroque .
+  dbr:Zacharias_Paulusz	dbo:movement	dbr:Baroque .
+  dbr:Hendrick_van_Streeck	dbo:movement	dbr:Baroque .
+  dbr:Juriaen_van_Streeck	dbo:movement	dbr:Baroque .
+  dbr:Willem_van_Nieulandt_II	dbo:movement	dbr:Baroque .
+  dbr:Pieter_Cornelisz_van_Rijck	dbo:movement	dbr:Baroque .
+  dbr:Dirk_Crabeth	dbo:movement	dbr:Renaissance .
+  dbr:Dirck_Ferreris	dbo:movement	dbr:Baroque .
+  dbr:Jan_van_Neck	dbo:movement	dbr:Baroque .
+  dbr:David_van_der_Plas	dbo:movement	dbr:Dutch_Golden_Age_painting .
+  dbr:Gerard_Hoet	dbo:movement	dbr:Dutch_Golden_Age_painting .
+  dbr:Hans_Jordaens	dbo:movement	dbr:Dutch_Golden_Age_painting .
+  dbr:Gesina_ter_Borch	dbo:movement	dbr:Baroque ,
+  		dbr:Dutch_Golden_Age .
+  dbr:Reinier_van_Persijn	dbo:movement	dbr:Baroque .
+  dbr:Pieter_Gerritsz_van_Roestraten	dbo:movement	dbr:Baroque .
+  dbr:Jan_de_Bisschop	dbo:movement	dbr:Baroque .
+  dbr:Rochus_van_Veen	dbo:movement	dbr:Baroque .
+  dbr:Johannes_Vermeer foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/8/84/Jan_Vermeer_van_Delft_002.jpg> ;
+  	dbp-prop:placeofBirth "Delft, Netherlands"@en .
+
+
+
+  dbr:Jan_Steen foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/d/d3/1670_Jan_Havicksz._Steen_-_zelfportret.jpg> ;
+  	dbp-prop:placeofBirth dbr:Leiden .
+
+
+  dbr:Govert_Flinck foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/a/a4/Govaert_Flinck_Self_Portrait.jpg> ;
+  	dbp-prop:placeofBirth dbr:Kleve .
+
+
+  dbr:Abraham_Bloemaert foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/2/2d/Meyssens,_Johannes_-_Abraham_Bloemaert.jpg> ;
+  	dbp-prop:placeofBirth "Gorinchem"@en .
+
+
+  dbr:Rembrandt foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/1/18/Rembrandt_self_portrait.jpg> ;
+  	dbp-prop:placeofBirth "Leiden, Netherlands"@en .
+
+  dbr:Arnold_Houbraken foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f5/Arnold_Houbraken3.JPG> ;
+  	dbp-prop:placeofBirth dbr:Dordrecht .
+
+  dbr:Jan_de_Baen foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/fb/Jan_de_Baen.jpg> ;
+  	dbp-prop:placeofBirth dbr:Holland .
+  dbr:Balthasar_van_der_Ast foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/1/1c/Fruit_still_life_with_shells.jpg> ;
+  	dbp-prop:placeofBirth dbr:Zeeland .
+
+  dbr:David_Bailly foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/0/0d/David_Bailly_Vanitas1651.jpg> ;
+  	dbp-prop:placeofBirth dbr:Leiden .
+  dbr:Thomas_Wijck foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/8/80/Thomas_Wijck_001.jpg> ;
+  	dbp-prop:placeofBirth dbr:Dutch_Republic .
+  dbr:Egbert_van_der_Poel foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/b/b1/Delftsedonderslag.jpg> ;
+  	dbp-prop:placeofBirth dbr:Delft .
+  dbr:Jan_van_Gool foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/8/81/Johan_van_Gool_-_selfportrait_1750.jpg> ;
+  	dbp-prop:placeofBirth dbr:The_Hague .
+  dbr:Hans_Jordaens foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/3/34/Noahs_Einzug_in_die_Arche_Hans_Jordaens.jpg> ;
+  	dbp-prop:placeofBirth dbr:Antwerp .
+  dbr:Gerard_Hoet foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/9/9d/Jean_Baptiste_Descamps-Gerard_Hoet_p232.gif> ;
+  	dbp-prop:placeofBirth dbr:Zaltbommel .
+  dbr:David_van_der_Plas foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/4/4e/Schouburg3_Plate_I_p220_21-Maria_Sybille_Merian_22-David_vander_Plaas.jpg> ;
+  	dbp-prop:placeofBirth dbr:Amsterdam .
+  dbr:Govert_van_der_Leeuw foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/7/7e/Govert_van_der_Leeuw-shepherds.jpg> ;
+  	dbp-prop:placeofBirth dbr:Dordrecht .
+    dbr:A_Girl_Asleep	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_young_women_sleeping.jpg> .
+    dbr:Portrait_of_a_Man_with_Arms_Akimbo	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz_van_Rijn_-_Portret_van_een_man_met_de_handen_in_de_zij_1658.jpg> .
+    dbr:Girl_with_a_Red_Hat	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_-_Girl_with_a_Red_Hat.JPG> .
+    dbr:View_of_Haarlem_with_Bleaching_Fields	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/View_of_Haarlem_with_Bleaching_Grounds_c1665_Ruisdael.jpg> .
+    dbr:Girl_Interrupted_at_her_Music	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_Girl_Interrupted_at_Her_Music.jpg> .
+    dbr:A_Polish_Nobleman	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt_van_Rijn_-_A_Polish_nobleman.jpg> .
+    <http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Altman)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrant_Self-Portrait,_1660.jpg> .
+    dbr:Lady_Standing_at_a_Virginal	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_-_Lady_Standing_at_a_Virginal_-_National_Gallery,_London.jpg> .
+    dbr:Titus_as_a_Monk	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_103.jpg> .
+    <http://dbpedia.org/resource/Self-portrait_(Frick,_Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_130.jpg> .
+    dbr:The_Storm_on_the_Sea_of_Galilee	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg> .
+    <http://dbpedia.org/resource/Susanna_and_the_Elders_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_Susanna_and_the_Elders.jpg> .
+    dbr:Lady_Writing_a_Letter_with_her_Maid	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/DublinVermeer.jpg> .
+    <http://dbpedia.org/resource/Flora_(Rembrandt,_Hermitage)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Harmensz_van_Rijn_Rembrandt_-_\u0424\u043B\u043E\u0440\u0430_-_Google_Art_Project.jpg> .
+    dbr:The_Polish_Rider	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_De_Poolse_ruiter,_c.1655_(Frick_Collection).jpg> .
+    dbr:Woman_in_Blue_Reading_a_Letter	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Vermeer,_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg> .
+    dbr:Windmill_at_Wijk_bij_Duurstede	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/De_molen_bij_Wijk_bij_Duurstede_Rijksmuseum_SK-C-211.jpeg> .
+    <http://dbpedia.org/resource/The_Kitchen_Maid_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/-_Google_Art_Project.jpg> .
+    dbr:Andromeda_Chained_to_the_Rocks	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_011.jpg> .
+    <http://dbpedia.org/resource/The_Mill_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/DeMolenRembrandt.jpg> .
+    dbr:Woman_with_a_Water_Jug	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_019.jpg> .
+    dbr:The_Music_Lesson	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_014.jpg> .
+    <http://dbpedia.org/resource/The_Procuress_(Vermeer)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_002.jpg> .
+    <http://dbpedia.org/resource/Bathsheba_at_Her_Bath_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_016.jpg> .
+    dbr:The_Three_Crosses	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_The_Three_Crosses_1653.jpg> .
+    dbr:Girl_with_a_Flute	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_020.jpg> .
+    dbr:A_Wooded_Marsh	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaaksz._van_Ruisdael_015.jpg> .
+    <http://dbpedia.org/resource/Belshazzar\u0027s_Feast_(Rembrandt)>	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt-Belsazar.jpg> .
+    <http://dbpedia.org/resource/The_Milkmaid_(Vermeer)>	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg> .
+    <http://dbpedia.org/resource/Syndics_of_the_Drapers\u0027_Guild>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_(waardijns)_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg> .
+    dbr:The_Feast_of_Saint_Nicholas	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Havicksz._Steen_-_Het_Sint_Nicolaasfeest_-_Google_Art_Project.jpg> .
+    dbr:The_Jewish_Bride	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_-_Portret_van_een_paar_als_Oud-Testamentische_figuren,_genaamd_\u0027Het_Joodse_bruidje\u0027_-_Google_Art_Project.jpg> .
+    dbr:Woman_with_a_Lute	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_-_Woman_with_a_Lute_near_a_window.jpg> .
+    <http://dbpedia.org/resource/The_Concert_(Vermeer)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_The_concert.JPG> .
+    dbr:The_Geographer	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/J._VERMEER_-_El_ge\u00F3grafo_(Museo_St\u00E4del,_Fr\u00E1ncfort_del_Meno,_1669).jpg> .
+    <http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Indianapolis)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_Clowes_self-portrait,_1639.png> .
+    <http://dbpedia.org/resource/Dana\u00EB_(Rembrandt_painting)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_026.jpg> .
+    <http://dbpedia.org/resource/Portrait_of_a_Young_Woman_(Vermeer)>	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Vermeer-Portrait_of_a_Young_Woman.jpg> .
+    dbr:The_Jewish_Cemetery	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaacksz._van_Ruisdael_-_The_Jewish_Cemetery_-_WGA20486.jpg> .
+    dbr:The_Night_Watch	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/The_Nightwatch_by_Rembrandt.jpg> .
+    <http://dbpedia.org/resource/Artemisia_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Artemisia,_by_Rembrandt,_from_Prado_in_Google_Earth.jpg> .
+    dbr:Portrait_of_Dirck_van_Os	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Portrait_of_the_Dyke_Reeve_Dirck_van_Os.jpg> .
+    dbr:Aristotle_with_a_Bust_of_Homer	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_013.jpg> .
+    dbr:The_Stoning_of_Saint_Stephen	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_150.jpg> .
+    dbr:A_Lady_Writing_a_Letter	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_A_Lady_Writing_-_Google_Art_Project.jpg> .
+    dbr:Moses_Breaking_the_Tablets_of_the_Law	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_079.jpg> .
+    dbr:Portrait_of_a_Young_Man_with_a_Golden_Chain	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_autoretrato01.jpg> .
+    dbr:Officer_and_Laughing_Girl	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_De_Soldaat_en_het_Lachende_Meisje_-_Google_Art_Project.jpg> .
+    dbr:Ahasuerus_and_Haman_at_the_Feast_of_Esther	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz_van_Rijn_-_Ahasuerus,_Haman_and_Esther_-_Google_Art_Project.jpg> .
+    <http://dbpedia.org/resource/The_Descent_from_the_Cross_(Rembrandt,_1650\u201352)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/The_Descent_from_the_Cross-1650_1652-Rembrandt_van_Rijn_and_Constantijn_van_Renesse.jpg> .
+    dbr:Girl_with_a_Pearl_Earring	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Meisje_met_de_parel.jpg> .
+    <http://dbpedia.org/resource/The_Astronomer_(Vermeer)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_The_Astronomer_-_WGA24685.jpg> .
+    <http://dbpedia.org/resource/The_Love_Letter_(Vermeer)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer,_Johannes_-_The_Loveletter.jpg> .
+    dbr:The_Holy_Family_with_Angels	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Harmensz_van_Rijn_Rembrandt_-_\u0421\u0432\u044F\u0442\u043E\u0435_\u0441\u0435\u043C\u0435\u0439\u0441\u0442\u0432\u043E_-_Google_Art_Project.jpg> .
+    dbr:Self-Portrait_with_Two_Circles	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Self-portrait_(Kenwood).jpg> .
+    dbr:Girl_Reading_a_Letter_at_an_Open_Window	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Girl_Reading_a_Letter_by_an_Open_Window_-_Google_Art_Project.jpg> .
+    <http://dbpedia.org/resource/The_Abduction_of_Europa_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Abduction_of_Europa.jpg> .
+    dbr:Landscape_with_Obelisk	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_076.jpg> .
+    dbr:A_Landscape_with_a_Ruined_Castle_and_a_Church	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaacksz._van_Ruisdael_-_An_Extensive_Landscape_with_a_Ruined_Castle_and_a_Village_Church_-_WGA20493.jpg> .
+    dbr:Portrait_of_Jan_Six	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Six_-_Rembrandt.jpg> .
+    dbr:Portrait_of_a_Man_Rising_from_His_Chair	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_Portrait_of_a_Man_Rising_from_his_Chair_-_1633.jpg> .
+    dbr:Self-portrait_as_the_Apostle_Paul	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_-_Zelfportret_als_de_apostel_Paulus_-_Google_Art_Project.jpg> .
+    dbr:Self-portrait_wearing_a_white_feathered_bonnet	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt_self-portrait_1635.jpeg> .
+    dbr:The_Ray_of_Light	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaaksz._van_Ruisdael_003.jpg> .
+    dbr:The_Conspiracy_of_Claudius_Civilis	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Bataafseeed.jpg> .
+    <http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Vienna)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmenszoon_van_Rijn_-_Large_Self-Portrait_-_Google_Art_Project.jpg> .
+    dbr:View_of_Delft	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Vermeer-view-of-delft.jpg> .
+    dbr:Self-portrait_at_the_age_of_34	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt,_Self_Portrait_at_the_Age_of_34.jpg> .
+    dbr:Woman_with_a_Pearl_Necklace	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_-_Young_Woman_with_a_Pearl_Necklace_-_Google_Art_Project.jpg> .
+    dbr:Woman_Holding_a_Balance	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg> .
+    dbr:A_Lady_and_Gentleman_in_Black	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/A_lady_and_gentleman_in_black,_by_Rembrandt.jpg> .
+    dbr:The_Allegory_of_Faith	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Johannes_Vermeer,_Allegory_of_the_Catholic_Faith,_The_Metropolitan_Museum_of_Art.jpg> .
+    dbr:Lady_Seated_at_a_Virginal	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Lady_Seated_at_a_Virginal,_Vermeer,_The_National_Gallery,_London.jpg> .
+    dbr:Old_Man_with_a_Gold_Chain	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_-_Old_Man_with_a_Gold_Chain_-_Google_Art_Project.jpg> .
+    dbr:The_Baptism_of_the_Eunuch	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_The_Baptism_of_the_Eunuch,_1626,_Museum_Catharijneconvent,_Utrecht.jpg> .
+    dbr:The_Prodigal_Son_in_the_Brothel	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg> .
+    <http://dbpedia.org/resource/The_Lacemaker_(Vermeer)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_The_lacemaker_(c.1669-1671).jpg> .
+    dbr:A_Young_Woman_Seated_at_the_Virginals	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_-_A_young_Woman_seated_at_the_Virginals.jpg> .
+    <http://dbpedia.org/resource/History_Painting_(Rembrandt)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Historical_Painting_1626.jpg> .
+    dbr:A_Waterfall_in_a_Rocky_Landscape	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaaksz._van_Ruisdael_006.jpg> .
+    dbr:Two_Watermills_and_an_Open_Sluice_near_Singraven	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaacksz._van_Ruisdael_-_Two_Watermills_and_an_Open_Sluice_near_Singraven_-_WGA20466.jpg> .
+    <http://dbpedia.org/resource/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp>	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/The_Anatomy_Lesson.jpg> .
+    dbr:The_Art_of_Painting	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg> .
+    dbr:The_Little_Street	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Johannes_Vermeer_-_Gezicht_op_huizen_in_Delft,_bekend_als_\u0027Het_straatje\u0027_-_Google_Art_Project.jpg> .
+    dbr:Diana_and_Her_Companions	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer_-_Diana_and_Her_Companions.jpg> .
+    dbr:The_Blinding_of_Samson	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_The_Blinding_of_Samson_-_WGA19097.jpg> .
+    dbr:Diana_Bathing_with_her_Nymphs_with_Actaeon_and_Callisto	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_Harmenszoon_van_Rijn_-_Diana_mit_Akt\u00E4on_und_Kallisto_-_c.1634-1635.jpg> .
+    dbr:Self-Portrait_with_Beret_and_Turned-Up_Collar	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg> .
+    <http://dbpedia.org/resource/Christ_in_the_House_of_Martha_and_Mary_(Vermeer)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Johannes_(Jan)_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg> .
+    dbr:Jacob_Blessing_the_Sons_of_Joseph	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_-_Jacob_Blessing_the_Children_of_Joseph_-_WGA19117.jpg> .
+    dbr:A_Young_Archer	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/A_Young_Archer_by_Govaert_Flinck.jpg> .
+    dbr:The_Dancing_Couple	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Steen_-_The_Dancing_Couple_-_Google_Art_Project.jpg> .
+    dbr:A_Mayor_of_Delft_and_his_Daughter	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jan_Steen_-_Adolf_en_Catharina_Croeser_aan_de_Oude_Delft_1655.jpg> .
+    dbr:Landscape_with_Waterfall	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaacksz._van_Ruisdael_-_Landschap_met_waterval_-_Google_Art_Project.jpg> .
+    dbr:Mountain_Landscape_with_a_Watermill	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_van_Ruisdael_-_Mountain_landscape_by_a_river.jpg> .
+    dbr:Pendant_portraits_of_Maerten_Soolmans_and_Oopjen_Coppit	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Pendant_portraits_of_Maerten_Soolmans_and_Oopjen_Coppit.jpeg> .
+    dbr:Portrait_of_Catharina_Hooghsaet	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_Portrait_of_Catrina_Hooghsaet.jpg> .
+    dbr:Portrait_of_Maerten_Soolmans	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Portrait_of_Marten_Soolmans.jpg> .
+    dbr:Portrait_of_Maria_Trip	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Portret_van_een_vrouw,_mogelijk_Maria_Trip_Rijksmuseum_SK-C-597.jpeg> .
+    dbr:Portrait_of_Oopjen_Coppit	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_Portrait_of_Oopjen_Coppit,_1634.jpg> .
+    dbr:Rough_Sea_at_a_Jetty	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/\u0027Rough_Sea_at_a_Jetty\u0027,_oil_on_canvas_painting_by_Jacob_van_Ruisdael,_1650s.jpg> .
+    <http://dbpedia.org/resource/The_Watermill_(Ruisdael)>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_van_Ruisdael_-_Watermill_-_NGV.jpg> .
+    dbr:View_of_Bentheim_Castle	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Kasteel_Bentheim_Rijksmuseum_SK-A-347.jpeg> .
+    dbr:View_of_Egmond_aan_Zee	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_van_Ruisdael_-_View_of_Egmond_aan_Zee_-_Nationalmuseum.jpg> .
+    dbr:View_on_the_Amstel_from_Amsteldijk	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/SA_56435-Gezicht_op_Amsterdam_vanaf_de_Amsteldijk.jpg> .
+    dbr:Waterfall_in_a_Mountainous_Landscape_with_a_Ruined_Castle	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_van_Ruisdael_-_Waterfall_in_a_Mountainous_Landscape_with_a_Ruined_Castle.jpg> .
+    dbr:Winter_Landscape_near_Haarlem	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_van_Ruisdael_-_Winter_Landscape_near_Haarlem.jpg> .
+    <http://dbpedia.org/resource/St._Matthew_and_the_Angel>	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_Harmensz._van_Rijn_049.jpg> .
+    dbr:Self-portrait_at_the_age_of_63	foaf:depiction	<http://en.wikipedia.org/wiki/Special:FilePath/Rembrandt,_Self_Portrait_at_the_Age_of_63.jpg> .
+		dbpedia:Rembrandt	dc:creator	"Naaktstudie van een man" ,
+				"Portret Arnout Tholincx" ,
+				"Wandelaarster bij deuropening waarin man en vrouw leunen" ,
+				"Le pasteur Eleazar Swalmius" ,
+				"Christus op het Meer van Tiberias" ,
+				"Nachtwacht" ,
+				"Presentatie van Christus in de tempel" ,
+				"beeldengroep" ,
+				"Impostures innocentes" ,
+				"Zittende oude man" ,
+				"En hilsen fra Finlands pr\u00E6sident til Danmarks statsminister"@da ,
+				"vaas" ,
+				"Portret van een jonge man met gevederde baret" ,
+				"ets" ,
+				"De opdracht in de tempel" ,
+				"De vaandeldrager" ,
+				"relief" ,
+				"Portret oude man in stoel, hand op tafel" ,
+				"De Staalmeesters, naar Rembrandt" ,
+				"Der Pfarrer Eleazar Swalmius" ,
+				"Ori\u00EBntaal" ,
+				"Christus te Emma\u00FCs" ,
+				"Portret van een vrouw, een appel schillend" ,
+				"Zelfportret Rembrandt met halberg" ,
+				"Portret van een man, driekwart naar rechts in ovaal" ,
+				"The Clergyman Eleazar Swalmius" ,
+				"theelicht" ,
+				"Saskia van Uylenburgh, la femme du peintre Rembrandt" ,
+				"Oude man" ,
+				"An Old Man" ,
+				"Saskia van Uylenburgh, Wife of the Painter Rembrandt" ,
+				"Kruisafname van Christus" ,
+				"Floris Soop als Schutter" ,
+				"Portret Frans Banning Kok" ,
+				"chanoekia" ,
+				"Timmermansfamilie (Heilige Familie?)" ,
+				"Portret oude man met wandelstok in stoel" ,
+				"Vertumnus en Pomona" ,
+				"Vrouw leunend over een onderdeur ('moeder Rembrandt')" ,
+				"Contribution by Rembrandt van Rijn in the Album amicorum II of Burchard Grossmann" ,
+				"Man met baard" ,
+				"vrije tekening" ,
+				"An historical disquisition on the mammoth : or, great American incognitum, an extinct, immense, carnivorous animal, whose fossil remains have been found in North America / by Rembrandt Peale." ,
+				"beeld" ,
+				"Portret Hendrick Martensz. Sorgh" ,
+				"buste" ,
+				"Greis" ,
+				"beker" ,
+				"Hoofd van een man met tulband" ,
+				"Bedelaars" ,
+				"Portret van een vrouw" ,
+				"Landschap met waterval" ,
+				"De anatomische les van Nicolaes Tulp" ,
+				"Portret scheepsbouwmeester Jan Rijksen en zijn vrouw" ,
+				"Saskia als Flora" ,
+				"Albuminscriptie van Rembrandt van Rijn (1606-1669), schilder, voor Burchard Grossmann" ,
+				"Kind in een wieg" ,
+				"Portret Nicolaes Tulp" ,
+				"Een schrijvende evangelist" ,
+				"schilderij" ,
+				"Verhandeling over de mastodonte of mammouth van den Ohio : ter geleide eener naauwkeurige afbeelding van het geraamte van dat dier / door A.C. Bonn." ,
+				"De engel verlaat Tobias en zijn familie" ,
+				"Boaz en Ruth" ,
+				"De predikant Eleazar Swalmius" ,
+				"Jongen leunend over een onderdeur ('Titus van Rijn')" ,
+				"Koning Uzzia met melaatsheid geslagen" ,
+				"Portret van een man met baret" ,
+				"Un vieillard" ,
+				"Saskia van Uylenburgh, vrouw van de schilder Rembrandt" .
+				dbr:Jan_Steen	dc:creator	dbr:The_Feast_of_Saint_Nicholas ,
+		dbr:The_Dancing_Couple ,
+		dbr:A_Mayor_of_Delft_and_his_Daughter .
+dbr:Jacob_van_Ruisdael	dc:creator	dbr:Windmill_at_Wijk_bij_Duurstede ,
+		dbr:A_Waterfall_in_a_Rocky_Landscape ,
+		<http://dbpedia.org/resource/The_Watermill_(Ruisdael)> ,
+		dbr:A_Wooded_Marsh ,
+		dbr:Rough_Sea_at_a_Jetty ,
+		dbr:Landscape_with_Waterfall ,
+		dbr:The_Jewish_Cemetery ,
+		dbr:View_of_Haarlem_with_Bleaching_Fields ,
+		dbr:Two_Watermills_and_an_Open_Sluice_near_Singraven ,
+		dbr:Mountain_Landscape_with_a_Watermill ,
+		dbr:View_of_Egmond_aan_Zee ,
+		dbr:View_on_the_Amstel_from_Amsteldijk ,
+		dbr:View_of_Bentheim_Castle ,
+		dbr:A_Landscape_with_a_Ruined_Castle_and_a_Church ,
+		dbr:Winter_Landscape_near_Haarlem ,
+		dbr:The_Ray_of_Light .
+dbr:Johannes_Vermeer	dc:creator	dbr:View_of_Delft ,
+		dbr:Woman_in_Blue_Reading_a_Letter ,
+		dbr:Woman_with_a_Pearl_Necklace ,
+		dbr:Woman_with_a_Water_Jug ,
+		dbr:A_Lady_Writing_a_Letter ,
+		dbr:Lady_Seated_at_a_Virginal ,
+		<http://dbpedia.org/resource/The_Milkmaid_(Vermeer)> ,
+		dbr:Woman_with_a_Lute ,
+		<http://dbpedia.org/resource/The_Concert_(Vermeer)> ,
+		dbr:Girl_with_a_Flute ,
+		<http://dbpedia.org/resource/The_Love_Letter_(Vermeer)> ,
+		dbr:Officer_and_Laughing_Girl ,
+		<http://dbpedia.org/resource/Christ_in_the_House_of_Martha_and_Mary_(Vermeer)> ,
+		dbr:The_Music_Lesson ,
+		dbr:Lady_Writing_a_Letter_with_her_Maid ,
+		dbr:The_Geographer ,
+		dbr:Diana_and_Her_Companions ,
+		dbr:Girl_with_a_Pearl_Earring ,
+		<http://dbpedia.org/resource/Portrait_of_a_Young_Woman_(Vermeer)> ,
+		dbr:Girl_Interrupted_at_her_Music ,
+		dbr:Lady_Standing_at_a_Virginal ,
+		dbr:The_Little_Street ,
+		<http://dbpedia.org/resource/The_Lacemaker_(Vermeer)> ,
+		dbr:A_Girl_Asleep ,
+		<http://dbpedia.org/resource/The_Procuress_(Vermeer)> ,
+		dbr:Girl_with_a_Red_Hat ,
+		<http://dbpedia.org/resource/The_Astronomer_(Vermeer)> ,
+		dbr:The_Allegory_of_Faith ,
+		dbr:Girl_Reading_a_Letter_at_an_Open_Window ,
+		dbr:Woman_Holding_a_Balance ,
+		dbr:The_Art_of_Painting .
+dbr:Govert_Flinck	dc:creator	dbr:Landscape_with_Obelisk ,
+		dbr:A_Young_Archer .
+dbr:Rembrandt	dc:creator	dbr:Pendant_portraits_of_Maerten_Soolmans_and_Oopjen_Coppit ,
+		<http://dbpedia.org/resource/The_Descent_from_the_Cross_(Rembrandt,_1650\u201352)> ,
+		dbr:A_Polish_Nobleman ,
+		dbr:Self-Portrait_with_Two_Circles ,
+		dbr:The_Polish_Rider ,
+		dbr:The_Conspiracy_of_Claudius_Civilis ,
+		dbr:Self-portrait_as_the_Apostle_Paul ,
+		dbr:Self-portrait_wearing_a_white_feathered_bonnet ,
+		<http://dbpedia.org/resource/Self-portrait_(Frick,_Rembrandt)> ,
+		dbr:Portrait_of_a_Man_Rising_from_His_Chair ,
+		dbr:The_Storm_on_the_Sea_of_Galilee ,
+		<http://dbpedia.org/resource/Belshazzar\u0027s_Feast_(Rembrandt)> ,
+		dbr:Old_Man_with_a_Gold_Chain ,
+		<http://dbpedia.org/resource/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp> ,
+		<http://dbpedia.org/resource/St._Matthew_and_the_Angel> ,
+		<http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Indianapolis)> ,
+		dbr:Moses_Breaking_the_Tablets_of_the_Law ,
+		dbr:Ahasuerus_and_Haman_at_the_Feast_of_Esther ,
+		dbr:Portrait_of_a_Young_Man_with_a_Golden_Chain ,
+		<http://dbpedia.org/resource/The_Abduction_of_Europa_(Rembrandt)> ,
+		dbr:The_Baptism_of_the_Eunuch ,
+		dbr:The_Blinding_of_Samson ,
+		<http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Altman)> ,
+		<http://dbpedia.org/resource/Self-portrait_(Rembrandt,_Vienna)> ,
+		dbr:Andromeda_Chained_to_the_Rocks ,
+		dbr:Self-Portrait_with_Beret_and_Turned-Up_Collar ,
+		<http://dbpedia.org/resource/Bathsheba_at_Her_Bath_(Rembrandt)> ,
+		<http://dbpedia.org/resource/Susanna_and_the_Elders_(Rembrandt)> ,
+		dbr:Portrait_of_Oopjen_Coppit ,
+		dbr:Portrait_of_Maerten_Soolmans ,
+		dbr:Aristotle_with_a_Bust_of_Homer ,
+		dbr:Portrait_of_Maria_Trip ,
+		<http://dbpedia.org/resource/Dana\u00EB_(Rembrandt_painting)> ,
+		<http://dbpedia.org/resource/The_Mill_(Rembrandt)> ,
+		<http://dbpedia.org/resource/The_Kitchen_Maid_(Rembrandt)> ,
+		dbr:Portrait_of_Dirck_van_Os ,
+		dbr:The_Stoning_of_Saint_Stephen ,
+		dbr:Titus_as_a_Monk ,
+		<http://dbpedia.org/resource/Artemisia_(Rembrandt)> ,
+		dbr:A_Lady_and_Gentleman_in_Black ,
+		dbr:The_Prodigal_Son_in_the_Brothel ,
+		dbr:The_Jewish_Bride ,
+		dbr:The_Night_Watch ,
+		dbr:The_Holy_Family_with_Angels ,
+		<http://dbpedia.org/resource/Flora_(Rembrandt,_Hermitage)> ,
+		dbr:The_Three_Crosses ,
+		dbr:Portrait_of_a_Man_with_Arms_Akimbo ,
+		<http://dbpedia.org/resource/Syndics_of_the_Drapers\u0027_Guild> .
